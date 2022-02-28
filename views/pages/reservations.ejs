@@ -1,0 +1,433 @@
+<% layout('layouts/boilerplate') %>
+
+    <h1 class="head-text">Want to Make a Booking?</h1>
+
+    <div class="jumbotron">
+        <p class="lead reservations-open">
+            Are you very busy and dont have time to make a phone call to us and make a reservations?
+        </p>
+        <p class="lead reservations-open">
+            We can make that easy for you by allowing you make a booking with us on the go at our South Beach and
+            Umhlanga restarants here on our website.
+        </p>
+    </div>
+
+    <hr class="hr-1">
+
+    <form action="/reservations">
+        <div class="mb-3 col-lg-6 ms-auto me-auto">
+            <label for="inputName" class="form-label">Name and Surname</label>
+            <input type="text" class="form-control" id="inputName">
+        </div>
+
+        <div class="mb-3 col-lg-6 ms-auto me-auto">
+            <label for="inputPhone" class="form-label">Phone Number</label>
+            <input type="text" class="form-control" id="inputPhone">
+        </div>
+
+        <div class="mb-3 col-lg-6 ms-auto me-auto">
+            <label for="InputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="leInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+
+        <!-- Number of People -->
+        <div class="dropdown ms-auto me-auto" id="people-container">
+            <p>
+                How many people will you be bringing along? (maximum of 6 people)
+            </p>
+
+            <button class="btn btn-secondary dropdown-toggle ms-auto me-auto" type="button" id="dropdownMenuButton1"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <p>Number of People</p>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">1</a></li>
+                <li><a class="dropdown-item" href="#">2</a></li>
+                <li><a class="dropdown-item" href="#">3</a></li>
+                <li><a class="dropdown-item" href="#">4</a></li>
+                <li><a class="dropdown-item" href="#">5</a></li>
+                <li><a class="dropdown-item" href="#">6</a></li>
+            </ul>
+        </div>
+        <!-- Number of People -->
+
+        <!-- Calendar -->
+        <div class="d-flex flex-column bd-highlight mb-3">
+            <div class="date ms-auto me-auto">
+                <label for="start">Select a date:</label>
+
+                <input type="date" id="start calendar" name="trip-start" value="2022-02-22" min="2022-01-01" max="2022-12-31">
+            </div>
+        </div>
+        <!-- Calendar -->
+
+        <!-- Tables -->
+        <p id="table-head">Select Location and Table</p>
+        
+        <div class="container" id="sb-tables">
+
+            <div class="container" id="sb-radio">
+                <div class="d-flex flex-column bd-highlight mb-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            <h2>South Beach</h2>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="table">
+                    <p class="table-pars">Table 1</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 2</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 3</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 4</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 5</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 6</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 7</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 8</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 9</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 10</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="table">
+                    <p class="table-pars">Table 11</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 12</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 13</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 14</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 15</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 16</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 17</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 18</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 19</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 20</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="table">
+                    <p class="table-pars">Table 21</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 22</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 23</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 24</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 25</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 26</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 27</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 28</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 29</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 30</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="table">
+                    <p class="table-pars">Table 31</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 32</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 33</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 34</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 35</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 36</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 37</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 38</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 39</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 40</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="table">
+                    <p class="table-pars">Table 41</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 42</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 43</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 44</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 45</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 46</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 47</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 48</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 49</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 50</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" id="sb-radio">
+            <div class="d-flex flex-column bd-highlight mb-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        <h2>Umhlanga</h2>
+                    </label>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container" id="umhlanga-tables">
+
+            <div class="row">
+                <div class="table">
+                    <p class="table-pars">Table 1</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 2</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 3</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 4</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 5</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 6</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 7</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 8</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 9</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 10</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="table">
+                    <p class="table-pars">Table 11</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 12</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 13</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 14</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 15</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 16</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 17</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 18</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 19</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 20</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="table">
+                    <p class="table-pars">Table 21</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 22</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 23</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 24</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 25</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 26</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 27</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 28</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 29</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 30</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="table">
+                    <p class="table-pars">Table 31</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 32</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 33</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 34</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 35</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 36</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 37</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 38</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 39</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 40</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="table">
+                    <p class="table-pars">Table 41</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 42</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 43</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 44</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 45</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 46</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 47</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 48</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 49</p>
+                </div>
+                <div class="table">
+                    <p class="table-pars">Table 50</p>
+                </div>
+            </div>
+        </div>
+
+    
+
+        <!-- Tables -->
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+                Are you happy with the information above?
+            </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <script src="reservations.js"></script>

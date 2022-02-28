@@ -1,0 +1,257 @@
+/* General Styling */
+body {
+  height: 100vh;
+  background-color: rgb(236, 225, 216);
+}
+
+a {
+  text-decoration: none;
+}
+
+.head-text {
+  text-align: center;
+}
+
+hr.hr-1 {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(245, 236, 236, 0), rgba(199, 195, 195, 0.75), rgba(0, 0, 0, 0));
+}
+
+/* Home */
+#home-slideshow {
+  width: 100%;
+}
+
+.home-jumbos {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 10px;
+  border: 1px solid rgba(61, 61, 61, 0.5);
+  border-left: none;
+  border-right: none;
+}
+
+.home-links {
+  padding-left: 0px;
+  padding-right: 0px;
+  border-radius: 0.5rem;
+}
+
+.home-links:hover {
+  box-shadow: 0px 15px 20px rgba(26, 31, 9, 0.7);
+  transform: translateY(-7px);
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.home-imgs {
+  border-radius: 0.5rem;
+}
+
+.home-link-txt {
+  text-align: center;
+}
+
+.home-pars {
+  text-align: center;
+}
+
+/* Menu */
+#Menu {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* Gallery */
+.gallery-carousel {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* Locations */
+.location-jumbos {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 10px;
+  border: 1px solid rgba(61, 61, 61, 0.5);
+  border-left: none;
+  border-right: none;
+}
+
+.map {
+  width: 500px;
+  height: 400px;
+  justify-content: center;
+}
+
+.location-head {
+  justify-content: center;
+}
+
+/* Reservations */
+table {
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+/* #dropdownMenuButton1 {
+  color: red;
+  justify-content: center;
+} */
+
+#start {
+  display: block;
+  font: 1rem 'Fira Sans', sans-serif;
+}
+
+#table-head {
+  text-align: center;
+}
+
+
+input,
+label {
+  margin: .4rem 0;
+}
+
+.res-tables {
+  margin: 25px;
+}
+
+.reservations-open {
+  text-align: center;
+  margin: 35px 35px;
+}
+
+.form-check-input {
+  align-content: center;
+}
+
+.table {
+  background-color: #444451;
+  height: 80px;
+  width: 80px;
+  margin: 10px;
+  border-radius: 100%;
+}
+
+.table-pars {
+  text-align: center;
+  color: white;
+}
+
+
+/* Contacts */
+.contact {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.contact-heads {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* About Us */
+.about-open {
+  margin-left: 20px;
+}
+
+.about-pars {
+  text-align: center;
+  margin: 20px 20px;
+}
+
+/* Bootstrap Elements */
+
+/* navbar */
+#navbarDropdown {
+  align-items: center;
+}
+
+#navbarSupportedContent {
+  text-align: end;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(221, 209, 216, 0.3);
+}
+
+.hamburger-menu {
+  margin-top: 10px;
+}
+
+/* carousels */
+
+.carousel-imgs {
+  width: 400px;
+  height: 600px;
+  border: solid 2px;
+  border-color: rgba(88, 87, 88, 0.3);
+  border-radius: 1rem;
+}
+
+.carousel {
+  border-radius: 1rem;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* footer */
+footer {
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+#copyright {
+  text-align: center;
+}
+
+#logo {
+  text-align: right;
+}
+
+#phone {
+  padding-bottom: 5px;
+}
+
+.social-media {
+  text-decoration: none;
+}
+
+/* cards */
+.card-link {
+  align-self: center;
+  align-content: center;
+  margin-bottom: 20px;
+  background-color: rgb(26, 25, 25);
+  border-color: rgb(26, 25, 25);
+}
+
+.card-link:hover {
+  background-color: rgba(15, 15, 15, 0.582);
+  border-color: rgba(150, 149, 147, 0.582);
+  box-shadow: 0px 15px 20px rgba(26, 31, 9, 0.4);
+  transform: translateY(-7px);
+}
+
+.card-imgs {
+  width: 286px;
+  height: 214px;
+}
+
+.card {
+  background-color: linen;
+  border: solid 1px;
+  border-color: rgb(136, 132, 132);
+}
+
+.card:hover {
+  background-color: rgb(219, 207, 195);
+  transform: translateY(-3px);
+  box-shadow: 0px 15px 20px rgba(26, 31, 9, 0.4);
+}
+
+.card-title {
+  text-align: center;
+}
