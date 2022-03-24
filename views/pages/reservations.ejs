@@ -3,10 +3,10 @@
     <h1 class="head-text">Want to Make a Booking?</h1>
 
     <div class="jumbotron">
-        <p class="lead reservations-open">
+        <p class="lead reservations-openPar">
             Are you very busy and dont have time to make a phone call to us and make a reservations?
         </p>
-        <p class="lead reservations-open">
+        <p class="lead reservations-openPar">
             We can make that easy for you by allowing you make a booking with us on the go at our South Beach and
             Umhlanga restarants here on our website.
         </p>
@@ -14,7 +14,7 @@
 
     <hr class="hr-1">
 
-    <form action="/reservations">
+    <form action="/reservations" method="POST">
         <div class="mb-3 col-lg-6 ms-auto me-auto">
             <label for="inputName" class="form-label">Name and Surname</label>
             <input type="text" class="form-control" id="inputName">
@@ -57,14 +57,15 @@
             <div class="date ms-auto me-auto">
                 <label for="start">Select a date:</label>
 
-                <input type="date" id="start calendar" name="trip-start" value="2022-02-22" min="2022-01-01" max="2022-12-31">
+                <input type="date" id="start calendar" name="res-date" value="2022-02-22" min="2022-01-01"
+                    max="2022-12-31">
             </div>
         </div>
         <!-- Calendar -->
 
         <!-- Tables -->
         <p id="table-head">Select Location and Table</p>
-        
+
         <div class="container" id="sb-tables">
 
             <div class="container" id="sb-radio">
@@ -79,162 +80,212 @@
             </div>
 
             <div class="row">
-                <div class="table">
+                <div class="table" id="sbTable-1" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 1</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-2" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 2</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-3" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 3</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-4" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 4</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-5" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 5</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-6" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 6</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-7" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 7</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-8" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 8</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-9" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 9</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-10" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 10</p>
                 </div>
             </div>
             <div class="row">
-                <div class="table">
+                <div class="table" id="sbTable-11" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 11</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-12" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 12</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-13" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 13</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-14" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 14</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-15" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 15</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-16" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 16</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-17" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 17</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-18" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 18</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-19" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 19</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-20" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 20</p>
                 </div>
             </div>
             <div class="row">
-                <div class="table">
+                <div class="table" id="sbTable-21" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 21</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-22" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 22</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-23" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 23</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sb-24" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 24</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-25" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 25</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-26" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 26</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-27" titsble="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 27</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-28" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 28</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-29" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 29</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-30" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 30</p>
                 </div>
             </div>
             <div class="row">
-                <div class="table">
+                <div class="table" id="sbTable-31" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 31</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sb-32" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 32</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-33" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 33</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-34" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 34</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-35" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 35</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-36" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 36</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-37" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 37</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-38" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 38</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-39" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 39</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-40" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 40</p>
                 </div>
             </div>
             <div class="row">
-                <div class="table">
+                <div class="table" id="sbTable-41" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 41</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-42" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 42</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-43" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 43</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-44" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 44</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-45" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 45</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-46" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 46</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-47" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 47</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-48" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 48</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-49" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 49</p>
                 </div>
-                <div class="table">
+                <div class="table" id="sbTable-50" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 50</p>
                 </div>
             </div>
@@ -255,168 +306,218 @@
         <div class="container" id="umhlanga-tables">
 
             <div class="row">
-                <div class="table">
+                <div class="table" id="umhTable-1" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1" role="checkbox">
                     <p class="table-pars">Table 1</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-2" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 2</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-3" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 3</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-4" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 4</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-5" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 5</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-6" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 6</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-7" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 7</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-8" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 8</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-9" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 9</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-10" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 10</p>
                 </div>
             </div>
             <div class="row">
-                <div class="table">
+                <div class="table" id="umhTable-11" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 11</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-12" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 12</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-13" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 13</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-14" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 14</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-15" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 15</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-16" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 16</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-17" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 17</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-18" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 18</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-19" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 19</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-20" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 20</p>
                 </div>
             </div>
             <div class="row">
-                <div class="table">
+                <div class="table" id="umhTable-21" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 21</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-22" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 22</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-23" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 23</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-24" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 24</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-25" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 25</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-26" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 26</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-27" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 27</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-28" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 28</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-29" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 29</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-30" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 30</p>
                 </div>
             </div>
             <div class="row">
-                <div class="table">
+                <div class="table" id="umhTable-31" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 31</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-32" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 32</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-33" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 33</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-34" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 34</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-35" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 35</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-36" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 36</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-37" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 37</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-38" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 38</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-39" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 39</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-40" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 40</p>
                 </div>
             </div>
             <div class="row">
-                <div class="table">
+                <div class="table" id="umhTable-41" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 41</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-42" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 42</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-43" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 43</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-44" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 44</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-45" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 45</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-46" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 46</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-47" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 47</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-48" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 48</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-49" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 49</p>
                 </div>
-                <div class="table">
+                <div class="table" id="umhTable-50" title="" role="checkbox" value="45" aria-checked="false" focusable="true"
+                    tabindex="-1">
                     <p class="table-pars">Table 50</p>
                 </div>
             </div>
         </div>
 
-    
+
 
         <!-- Tables -->
 
@@ -430,4 +531,4 @@
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 
-    <script src="reservations.js"></script>
+    <script src="/javascripts/reservations.js"></script>
