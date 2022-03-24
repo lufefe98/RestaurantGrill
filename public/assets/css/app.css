@@ -89,17 +89,7 @@ hr.hr-1 {
   justify-content: center;
 }
 
-/* Reservations */
-table {
-  margin-bottom: 10px;
-  margin-left: 10px;
-}
-
-/* #dropdownMenuButton1 {
-  color: red;
-  justify-content: center;
-} */
-
+/* RESERVATIONS */
 #start {
   display: block;
   font: 1rem 'Fira Sans', sans-serif;
@@ -109,19 +99,14 @@ table {
   text-align: center;
 }
 
-
 input,
 label {
   margin: .4rem 0;
 }
 
-.res-tables {
-  margin: 25px;
-}
-
-.reservations-open {
+.reservations-openPar {
   text-align: center;
-  margin: 35px 35px;
+  margin: 15px 35px 15px;
 }
 
 .form-check-input {
@@ -139,6 +124,20 @@ label {
 .table-pars {
   text-align: center;
   color: white;
+}
+
+.table:hover {
+  box-shadow: 0px 5px 5px rgba(26, 31, 9, 0.4);
+  transform: translateY(-2px);
+}
+
+.tableSelected {
+  background-color: #5c86eb;
+  color: black;
+ }
+
+.tableUnavailable {
+background-color: #5c86eb;
 }
 
 
