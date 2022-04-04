@@ -18,7 +18,7 @@ hr.hr-1 {
   background-image: linear-gradient(to right, rgba(245, 236, 236, 0), rgba(199, 195, 195, 0.75), rgba(0, 0, 0, 0));
 }
 
-/* Home */
+/* HOME */
 #home-slideshow {
   width: 100%;
 }
@@ -33,8 +33,7 @@ hr.hr-1 {
 }
 
 .home-links {
-  padding-left: 0px;
-  padding-right: 0px;
+  /* padding-right: 0px; */
   border-radius: 0.5rem;
 }
 
@@ -49,13 +48,14 @@ hr.hr-1 {
   border-radius: 0.5rem;
 }
 
-.home-link-txt {
+.home-h2 {
   text-align: center;
 }
 
 .home-pars {
   text-align: center;
 }
+
 
 /* Menu */
 #Menu {
