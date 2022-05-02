@@ -1,7 +1,25 @@
-/* General Styling */
+/* GENRAL HTML */
 body {
   height: 100vh;
-  background-color: rgb(236, 225, 216);
+  background-color: linen;
+}
+
+.container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.form-control {
+  margin: auto;
+}
+
+.emailHelp {
+  text-align: center;
+  font-weight: bold;
+}
+
+img {
+  border-radius: 1rem;
 }
 
 a {
@@ -18,11 +36,11 @@ hr.hr-1 {
   background-image: linear-gradient(to right, rgba(245, 236, 236, 0), rgba(199, 195, 195, 0.75), rgba(0, 0, 0, 0));
 }
 
-/* HOME */
-#home-slideshow {
-  width: 100%;
-}
 
+
+
+
+/* HOME */
 .home-jumbos {
   margin-top: 50px;
   margin-bottom: 50px;
@@ -32,24 +50,32 @@ hr.hr-1 {
   border-right: none;
 }
 
-.home-links {
-  /* padding-right: 0px; */
-  border-radius: 0.5rem;
-}
-
-.home-links:hover {
-  box-shadow: 0px 15px 20px rgba(26, 31, 9, 0.7);
-  transform: translateY(-7px);
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
 .home-imgs {
   border-radius: 0.5rem;
+  height: 375px;
+  width: 450px;
+  justify-content: center;
 }
+
+.home-imgs-div {
+  display: flex;
+  justify-content: center;
+}
+
 
 .home-h2 {
   text-align: center;
+  text-decoration-color: black;
+}
+
+.home-links {
+  color: black;
+  text-decoration: underline;
+}
+
+.home-links:hover {
+  text-shadow: 0px 15px 20px rgba(29, 29, 29, 0.6);
+  color: black;
 }
 
 .home-pars {
@@ -57,19 +83,42 @@ hr.hr-1 {
 }
 
 
-/* Menu */
-#Menu {
-  margin-top: 50px;
-  margin-bottom: 50px;
+
+
+
+
+
+/* MENU */
+
+
+
+
+
+
+/* CONTACTS */
+.contact-card {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-/* Gallery */
+
+
+
+
+/* GALLERY */
 .gallery-carousel {
   margin-top: 50px;
   margin-bottom: 50px;
 }
+.carousel-heading {
+  text-align: center;
+}
 
-/* Locations */
+
+
+
+
+/* LOCATIONS */
 .location-jumbos {
   margin-top: 50px;
   margin-bottom: 50px;
@@ -89,6 +138,10 @@ hr.hr-1 {
   justify-content: center;
 }
 
+
+
+
+ 
 /* RESERVATIONS */
 #start {
   display: block;
@@ -97,6 +150,18 @@ hr.hr-1 {
 
 #table-head {
   text-align: center;
+}
+
+#reservationsButton {
+  background-color: rgb(26, 25, 25);
+  border-color: rgb(26, 25, 25);
+}
+
+#reservationsButton:hover {
+  background-color: rgba(15, 15, 15, 0.582);
+  border-color: rgba(150, 149, 147, 0.582);
+  box-shadow: 0px 15px 20px rgba(29, 29, 29, 0.6);
+  transform: translateY(-7px);
 }
 
 input,
@@ -127,7 +192,7 @@ label {
 }
 
 .table:hover {
-  box-shadow: 0px 5px 5px rgba(26, 31, 9, 0.4);
+  box-shadow: 0px 5px 5px rgba(29, 29, 29, 0.4);
   transform: translateY(-2px);
 }
 
@@ -141,29 +206,110 @@ background-color: #5c86eb;
 }
 
 
-/* Contacts */
-.contact {
-  margin-top: 50px;
-  margin-bottom: 50px;
+
+
+/* REVIEWS */
+#reviewButton {
+  background-color: rgb(26, 25, 25);
+  border-color: rgb(26, 25, 25);
 }
 
+#reviewButton:hover {
+  background-color: rgba(15, 15, 15, 0.582);
+  border-color: rgba(150, 149, 147, 0.582);
+  box-shadow: 0px 15px 20px rgba(29, 29, 29, 0.6);
+  transform: translateY(-7px);
+}
+
+#reviewsForm {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#reviewButton {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin: auto;
+}
+
+#ratingDiv {
+  display: grid;
+}
+
+#rating {
+  display: block;
+  margin: auto;
+  width: 20%;
+}
+
+#reviewDate {
+  display: grid;
+}
+
+#date {
+  margin: auto;
+  width: 25%;
+  font-weight: lighter;
+}
+
+.reviewBtnDiv {
+  display: grid;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.customerReviews {
+  margin-left: 33%;
+  margin-right: 33%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.customerReviews:nth-of-type(n+6) {
+  display: none;
+}
+
+.showReview {
+  display: block;
+}
+
+.hide-me {
+  display: none;
+}
+
+.textBold {
+  font-weight: bold;
+}
+
+
+
+
+/* CONTACTS */
 .contact-heads {
   text-align: center;
   margin-bottom: 20px;
 }
 
-/* About Us */
+
+
+
+
+/* ABOUT US */
 .about-open {
-  margin-left: 20px;
+  text-align: center;
 }
 
 .about-pars {
   text-align: center;
-  margin: 20px 20px;
+  margin-right: 15%;
+  margin-left: 15%;
 }
 
-/* Bootstrap Elements */
 
+
+
+
+/* BOOTSTRAP ELEMENTS */
 /* navbar */
 #navbarDropdown {
   align-items: center;
@@ -173,8 +319,13 @@ background-color: #5c86eb;
   text-align: end;
 }
 
+/* .navbar {
+  background-color: rgb(236, 225, 216);
+  border-bottom: 1px solid rgba(126, 124, 124, 0.4);
+} */
+
 .dropdown-item:hover {
-  background-color: rgba(221, 209, 216, 0.3);
+  background-color: rgba(126, 124, 124, 0.4);
 }
 
 .hamburger-menu {
@@ -182,24 +333,28 @@ background-color: #5c86eb;
 }
 
 /* carousels */
+.carousel {
+  border-radius: 1rem;
+  height: 400px;
+  width: 525px;
+}
 
-.carousel-imgs {
-  width: 400px;
-  height: 600px;
-  border: solid 2px;
-  border-color: rgba(88, 87, 88, 0.3);
+.carousel-item {
   border-radius: 1rem;
 }
 
-.carousel {
+.carousel-imgs {
+  height: 400px;
+  width: 525px;
+  border-color: rgba(88, 87, 88, 0.3);
   border-radius: 1rem;
-  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
 }
 
 /* footer */
 footer {
   margin-bottom: 0px;
   margin-top: 10px;
+  width: 100%;
 }
 
 #copyright {
@@ -214,41 +369,40 @@ footer {
   padding-bottom: 5px;
 }
 
-.social-media {
-  text-decoration: none;
-}
-
 /* cards */
-.card-link {
-  align-self: center;
-  align-content: center;
-  margin-bottom: 20px;
-  background-color: rgb(26, 25, 25);
-  border-color: rgb(26, 25, 25);
-}
-
-.card-link:hover {
-  background-color: rgba(15, 15, 15, 0.582);
-  border-color: rgba(150, 149, 147, 0.582);
-  box-shadow: 0px 15px 20px rgba(26, 31, 9, 0.4);
-  transform: translateY(-7px);
-}
-
-.card-imgs {
-  width: 286px;
-  height: 214px;
-}
-
 .card {
+  margin-top: 20px;
+  margin-bottom: 20px;
   background-color: linen;
   border: solid 1px;
   border-color: rgb(136, 132, 132);
 }
 
+.card-text {
+  text-align: center;
+}
+
+.card-button {
+  background-color: rgb(26, 25, 25);
+  border-color: rgb(26, 25, 25);
+}
+
+.card-button:hover {
+  background-color: rgba(15, 15, 15, 0.582);
+  border-color: rgba(150, 149, 147, 0.582);
+  box-shadow: 0px 15px 20px rgba(29, 29, 29, 0.6);
+  transform: translateY(-7px);
+}
+
+.card-imgs {
+  width: auto;
+  height: 220px;
+  border-radius: 0.25rem;
+  margin-top: 5px;
+}
+
 .card:hover {
   background-color: rgb(219, 207, 195);
-  transform: translateY(-3px);
-  box-shadow: 0px 15px 20px rgba(26, 31, 9, 0.4);
 }
 
 .card-title {
