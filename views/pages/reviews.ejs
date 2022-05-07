@@ -1,3 +1,97 @@
-<% layout('layouts/boilerplate') %> 
+<% layout('layouts/boilerplate') %>
 
-<h1 class="head-text">What do you think of us?</h1>
+<div class="jumbotron">
+    <h1>Here is What Other customers Have to Say</h1>
+</div>
+    
+    <hr class="hr-1">
+
+    <% for (r of reviews) {%>
+        <section class="customerReviews">
+
+            <span id="r-name">
+                <%= r.name %>
+            </span> -
+
+            <span id="r-date">
+                <%= r.date %>
+            </span>
+
+            <div id="r-rating">
+                <%= r.rating %>/5
+            </div>
+
+            <p id="r-review">
+                <%= r.review %>
+            </p>
+
+        </section>
+        <% } %>
+
+            <button id="showmore">See More Reviews</button>
+
+
+
+
+            <div class="container">
+                <div class="row">
+
+                    <h2 id="review-h1">What do you think of our service?</h2>
+
+                    <form action="/reviews" method="POST" id="reviewsForm">
+                        <div>
+                            <label for="name" class="form-label">Name:</label>
+                            <input type="text" class="form-control" class="name" placeholder="eg: John Smith" name="name">
+                        </div>
+
+                        <div>
+                            <label for="email" class="form-label">Email address:</label>
+                            <input type="email" class="form-control" class="email" placeholder="name@example.com"
+                                name="email">
+                        </div>
+                        <div class="form-text emailHelp">We'll never share your email with anyone else.</div>
+
+                        <div class="dateDiv">
+                            <label for="date">Date:</label>
+                            
+                            <input type="date" class="form-control" class="date" name="date" value="2022-01-01"
+                                min="01-01-2022" max="31-12-2022">
+                        </div>
+
+                        <div id="ratingDiv">
+                            <label>Ratings:</label>
+                            <fieldset class="rating" id="rating">
+
+                                <input type="radio" id="star5" name="rating" value="5" /><label for="star5"
+                                    title="Excellent">5 stars</label>
+
+                                <input type="radio" id="star4" name="rating" value="4" /><label for="star4"
+                                    title="Very Good">4 stars</label>
+
+                                <input type="radio" id="star3" name="rating" value="3" /><label for="star3"
+                                    title="Satisfactory">3 stars</label>
+
+                                <input type="radio" id="star2" name="rating" value="2" /><label for="star2"
+                                    title="Not Satisfactory">2 stars</label>
+
+                                <input type="radio" id="star1" name="rating" value="1" /><label for="star1"
+                                    title="Awful">1 star</label>
+
+                            </fieldset>
+
+                        </div>
+
+                        <div>
+                            <label for="review" class="form-label">Write Your Review:</label>
+                            <textarea class="form-control" id="review" rows="5" name="review"></textarea>
+                        </div>
+
+                        <div class="reviewBtnDiv">
+                            <button class="btn btn-secondary" id="reviewButton">Submit Review</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+            <script src="/javascripts/reviews.js"></script>
