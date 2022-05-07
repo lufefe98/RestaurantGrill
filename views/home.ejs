@@ -1,113 +1,135 @@
-<% layout('layouts/boilerplate') %> 
+<% layout('layouts/boilerplate') %>
 
-<div class="jumbotron">
-  <h1 class="display-4 head-text">Home</h1>
+  <div class="jumbotron">
+    <h1>WELCOME TO RESTAURANT GRILL</h1>
+  </div>
+
   <hr class="hr-1">
-</div>
 
-<!-- Home Image Carousel -->
+  <!-- Home Image Carousel -->
 
 
-  <div class="jumbotron jumbotron-fluid" id="home-slideshow">
+  <div class="jumbotron jumbotron-fluid">
     <div class="container">
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="row">
+          <div id="carouselExampleControls" class="carousel slide carousel-fade mx-auto" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Restaurant_N%C3%A4sinneula.jpg/800px-Restaurant_N%C3%A4sinneula.jpg" class="d-block w-100 carousel-imgs" alt="...">
+                <img
+                  src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHJlc3RhdXJhbnRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                  class="d-block w-100 carousel-imgs" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Sydney_Tower_Revolving_Restauarant.jpg?download" class="d-block w-100 carousel-imgs" alt="...">
+                <img
+                  src="https://images.unsplash.com/photo-1525648199074-cee30ba79a4a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHJlc3RhdXJhbnRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                  class="d-block w-100 carousel-imgs" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="https://media-cdn.tripadvisor.com/media/photo-s/17/75/3f/d1/restaurant-in-valkenswaard.jpg" class="d-block w-100 carousel-imgs" alt="...">
+                <img
+                  src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzl8fHJlc3RhdXJhbnRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                  class="d-block w-100 carousel-imgs" alt="...">
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
           </div>
-          </div>
+      </div>
     </div>
   </div>
- 
-<!-- Home Image Carousel -->
+
+  <!-- Home Image Carousel -->
 
 
-<!-- Jumbotrons with Links to Important pages -->
+  <!-- Jumbotrons with Links to Important pages -->
 
-  <div class="container home-tings">
+  <div class="container">
 
     <!-- Menu -->
-    <div class="container d-flex row flex-row bd-highlight mb-3 home-jumbos">
+    <div class="container row d-flex flex-row mb-3 home-jumbos">
 
-      <div class="jumbotron jumbotron-fluid me-auto ms-auto col-sm-12 col-lg-4">
-          <h2 class="home-h2">Menu</h2>
-          <article>
-            <p class="home-pars">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Sed sequi ut a fugiat facere recusandae suscipit adipisci, temporibus quas exercitationem beatae esse atque earum maiores repudiandae similique natus impedit illo.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Sed sequi ut a fugiat facere recusandae suscipit adipisci, temporibus quas exercitationem beatae esse atque earum maiores repudiandae similique natus impedit illo.
-            </p>
-          </article>
+      <div class="col-sm-12 col-md-12 col-lg-6">
+        <h2 class="home-h2">
+          <a href="/menu" class="home-links">Menu</a>
+        </h2>
+
+        <article>
+          <p class="home-pars">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sed sequi ut a fugiat facere recusandae suscipit adipisci, temporibus quas exercitationem beatae esse atque
+            earum maiores repudiandae similique natus impedit illo.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sed sequi ut a fugiat facere recusandae suscipit adipisci, temporibus quas exercitationem beatae esse atque
+            earum maiores repudiandae similique natus impedit illo.
+            </a>
+          </p>
+        </article>
       </div>
 
-      <div class="jumbotron jumbotron-fluid me-auto ms-auto col-sm-12 col-lg-4 home-links">
-              <a href="/menu">
-                  <img src="https://media.istockphoto.com/photos/restaurant-birthday-celebration-menu-while-you-wait-picture-id528530049?b=1&k=20&m=528530049&s=170667a&w=0&h=J7cDDyx5f9kqzbxKrjzf8R-8JqhT0ETIFMDsEhHASyw=" class="home-imgs" alt="">
-                </a>
+      <div class="col-sm-12 col-md-12 col-lg-6">
+        <div class="home-imgs-div">
+          <img
+            src="https://media.istockphoto.com/photos/restaurant-birthday-celebration-menu-while-you-wait-picture-id528530049?b=1&k=20&m=528530049&s=170667a&w=0&h=J7cDDyx5f9kqzbxKrjzf8R-8JqhT0ETIFMDsEhHASyw="
+            class="home-imgs" alt="">
+        </div>
       </div>
-      
+
     </div>
     <!-- Menu -->
 
 
     <!-- Reservations -->
-    <div class="container d-flex row flex-row bd-highlight mb-3 home-jumbos">
+    <div class="container d-flex row flex-row mb-3 home-jumbos">
 
-      <div class="jumbotron jumbotron-fluid col-sm-12 col-lg-4 me-auto ms-auto home-links">
-          <a href="/reservations">
-              <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cmVzdGF1cmFudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="home-imgs" alt="">
-            </a>
+      <div class="col-sm-12 col-md-12 col-lg-6">
+        <div class="home-imgs-div">
+          <img
+            src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cmVzdGF1cmFudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+            class="home-imgs" alt="">
+        </div>
       </div>
 
-      <div class="jumbotron jumbotron-fluid col-sm-12 col-lg-4 me-auto ms-auto">
-          <h2 class="home-h2">Reservations</h2>
-          <article>
-            <p class="home-pars">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Sed sequi ut a fugiat facere recusandae suscipit adipisci, temporibus quas exercitationem beatae esse atque earum maiores repudiandae similique natus impedit illo.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Sed sequi ut a fugiat facere recusandae suscipit adipisci, temporibus quas exercitationem beatae esse atque earum maiores repudiandae similique natus impedit illo.
-            </p>
-          </article>
+      <div class="col-sm-12 col-md-12 col-lg-6">
+        <h2 class="home-h2">
+          <a href="/reservations" class="home-links">Reservations</a>
+        </h2>
+
+        <article>
+          <p class="home-pars">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sed sequi ut a fugiat facere recusandae suscipit adipisci, temporibus quas exercitationem beatae esse atque
+            earum maiores repudiandae similique natus impedit illo.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sed sequi ut a fugiat facere recusandae suscipit adipisci, temporibus quas exercitationem beatae esse atque
+            earum maiores repudiandae similique natus impedit illo.
+          </p>
+        </article>
       </div>
     </div>
     <!-- Reservations -->
 
 
     <!-- Reviews -->
-    <div class="container d-flex row flex-row bd-highlight mb-3 home-jumbos">
-      
-      <div class="col-sm-12 col-lg-4 me-auto ms-auto">
-          <h2 class="home-h2">Reviews</h2>
-          <article>
-            <p class="home-pars">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Sed sequi ut a fugiat facere recusandae suscipit adipisci, temporibus quas exercitationem beatae esse atque earum maiores repudiandae similique natus impedit illo.
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Sed sequi ut a fugiat facere recusandae suscipit adipisci, temporibus quas exercitationem beatae esse atque earum maiores repudiandae similique natus impedit illo.
-            </p>
-          </article>
+    <div class="container d-flex row flex-row mb-3 home-jumbos">
+
+      <div class="col-sm-12 col-md-12 col-lg-6">
+        <h2 class="home-h2">
+          <a href="/reviews" class="home-links">Reviews</a>
+        </h2>
+
+        <article>
+          <p class="home-pars">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sed sequi ut a fugiat facere recusandae suscipit adipisci, temporibus quas exercitationem beatae esse atque
+            earum maiores repudiandae similique natus impedit illo.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sed sequi ut a fugiat facere recusandae suscipit adipisci, temporibus quas exercitationem beatae esse atque
+            earum maiores repudiandae similique natus impedit illo.
+          </p>
+        </article>
       </div>
-      
-      <div class="col-sm-12 col-lg-4 me-auto ms-auto home-links">
-          <a href="/reviews">
-              <img src="https://media.istockphoto.com/photos/waitress-taking-orders-to-people-at-a-restaurant-picture-id506828094?b=1&k=20&m=506828094&s=170667a&w=0&h=H0qhZosiyqYPQo8zLUZ4dJY-ct1lm1cwOXL6tU8Un9o=" class="home-imgs" alt="">
-            </a>
+
+      <div class="col-sm-12 col-md-12 col-lg-6">
+        <div class="home-imgs-div">
+          <img
+            src="https://media.istockphoto.com/photos/waitress-taking-orders-to-people-at-a-restaurant-picture-id506828094?b=1&k=20&m=506828094&s=170667a&w=0&h=H0qhZosiyqYPQo8zLUZ4dJY-ct1lm1cwOXL6tU8Un9o="
+            class="home-imgs" alt="">
+        </div>
       </div>
 
     </div>
@@ -115,28 +137,34 @@
 
 
     <!-- About Us -->
-    <div class="container d-flex row flex-row bd-highlight mb-3 home-jumbos">
+    <div class="container d-flex row flex-row mb-3 home-jumbos">
 
-      <div class="col col-sm-12 col-md-12 col-lg-6 me-auto ms-auto home-links">
-          <a href="/about">
-            <img src="https://media.istockphoto.com/photos/two-diverse-entrepreneurs-have-a-team-meeting-in-their-stylish-coffee-picture-id1293174967?b=1&k=20&m=1293174967&s=170667a&w=0&h=mYaxfD3iRZ28liOyzS8PgRrysrVLISxJ4HgUHHv7jHg=" class="home-imgs" alt="">
-            </a>
+      <div class="col-sm-12 col-md-12 col-lg-6 mx-auto">
+        <div class="home-imgs-div">
+          <img
+            src="https://media.istockphoto.com/photos/two-diverse-entrepreneurs-have-a-team-meeting-in-their-stylish-coffee-picture-id1293174967?b=1&k=20&m=1293174967&s=170667a&w=0&h=mYaxfD3iRZ28liOyzS8PgRrysrVLISxJ4HgUHHv7jHg="
+            class="home-imgs" alt="">
+        </div>
       </div>
 
-      <div class="col col-sm-12 col-md-12 col-lg-6 me-auto ms-auto"> 
-        <h2 class="home-h2">About Us</h2>
-          <article>
-            <p class="home-pars">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Sed sequi ut a fugiat facere recusandae suscipit adipisci, temporibus quas exercitationem beatae esse atque earum maiores repudiandae similique natus impedit illo.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Sed sequi ut a fugiat facere recusandae suscipit adipisci, temporibus quas exercitationem beatae esse atque earum maiores repudiandae similique natus impedit illo.
-            </p>
-          </article>
-      </div>
+      <div class="col-sm-12 col-md-12 col-lg-6">
+        <h2 class="home-h2">
+          <a href="/about" class="home-links">About Us</a>
+        </h2>
 
+        <article>
+          <p class="home-pars">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sed sequi ut a fugiat facere recusandae suscipit adipisci, temporibus quas exercitationem beatae esse atque
+            earum maiores repudiandae similique natus impedit illo.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sed sequi ut a fugiat facere recusandae suscipit adipisci, temporibus quas exercitationem beatae esse atque
+            earum maiores repudiandae similique natus impedit illo.
+          </p>
+        </article>
+      </div>
     </div>
     <!-- About Us -->
 
   </div>
 
-<!-- Jumbotrons with Links to Important pages -->
+  <!-- Jumbotrons with Links to Important pages -->
