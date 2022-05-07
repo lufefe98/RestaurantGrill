@@ -1,0 +1,515 @@
+/* GENRAL HTML */
+body {
+  height: 100vh;
+  background-color: linen;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  border-radius: 1rem;
+}
+
+h1 {
+  font-family: 'Libre Bodoni', serif;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Libre Bodoni', serif;
+}
+
+h3 {
+  font-family: 'Libre Bodoni', serif;
+}
+
+h5 {
+  font-family: 'Libre Bodoni', serif;
+}
+
+label {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+}
+
+input[type="text"] {
+  font-family: 'Raleway', sans-serif;
+}
+
+input[type="email"] {
+  font-family: 'Raleway', sans-serif;
+}
+
+.container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.form-control {
+  margin: auto;
+}
+
+.emailHelp {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+}
+
+.dateDiv {
+  display: grid;
+}
+
+.date {
+  margin: auto;
+  width: 25%;
+}
+
+hr.hr-1 {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(245, 236, 236, 0), rgba(199, 195, 195, 0.75), rgba(0, 0, 0, 0));
+}
+
+
+
+
+
+/* HOME */
+.home-jumbos {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 10px;
+  border: 1px solid rgba(61, 61, 61, 0.5);
+  border-left: none;
+  border-right: none;
+}
+
+.home-imgs {
+  border-radius: 0.5rem;
+  height: 375px;
+  width: 450px;
+  justify-content: center;
+}
+
+.home-imgs-div {
+  display: flex;
+  justify-content: center;
+}
+
+
+.home-h2 {
+  text-align: center;
+  text-decoration-color: black;
+  font-family: 'Libre Bodoni', serif;
+}
+
+.home-links {
+  color: black;
+  text-decoration: underline;
+}
+
+.home-links:hover {
+  text-shadow: 0px 15px 20px rgba(29, 29, 29, 0.6);
+  color: black;
+}
+
+.home-pars {
+  text-align: center;
+  font-family: 'Merriweather', serif;
+}
+
+
+
+
+
+
+
+/* MENU */
+
+
+
+
+
+
+/* CONTACTS */
+.contact-card {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+/* GALLERY */
+.gallery-carousel {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.carousel-heading {
+  text-align: center;
+}
+
+
+
+
+
+/* LOCATIONS */
+.location-jumbos {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 10px;
+  border: 1px solid rgba(61, 61, 61, 0.5);
+  border-left: none;
+  border-right: none;
+}
+
+.map {
+  width: 500px;
+  height: 400px;
+  justify-content: center;
+}
+
+.location-head {
+  justify-content: center;
+}
+
+
+
+
+ 
+/* RESERVATIONS */
+input[type="date"] {
+  font-family: 'Raleway', sans-serif;
+  font-weight: lighter;
+  text-align: center;
+  margin: auto;
+  width: 25%;
+}
+
+[type=radio] { 
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+[type=radio] + img {
+  cursor: pointer;
+}
+
+[type=radio]:checked + img {
+  outline: 3px solid rgba(128, 130, 243, 0.705);
+  box-shadow: 0 0 40px rgba(233, 72, 51, 0.7);
+  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.7))
+}
+
+[type=radio]:hover + img {
+  box-shadow: 0 0 40px rgba(233, 72, 51, 0.7);
+  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.7))
+}
+
+input,
+label {
+  margin: .4rem 0;
+}
+
+#table-head {
+  text-align: center;
+}
+
+#reservationsButton {
+  background-color: rgb(26, 25, 25);
+  border-color: rgb(26, 25, 25);
+}
+
+#reservationsButton:hover {
+  background-color: rgba(15, 15, 15, 0.582);
+  border-color: rgba(150, 149, 147, 0.582);
+  box-shadow: 0px 15px 20px rgba(29, 29, 29, 0.6);
+  transform: translateY(-7px);
+}
+
+#res-date-label {
+  text-align: center;
+}
+
+#res-loc-radios {
+  text-align: center;
+}
+
+#reservationsButton {
+  font-family: 'Raleway', sans-serif;
+}
+
+#max-people-res {
+  font-family: 'Raleway', sans-serif;
+}
+
+#people-container {
+  text-align: center;
+}
+
+.reservations-openPar {
+  font-family: 'Merriweather', serif;
+  text-align: center;
+  margin: 15px 35px 15px;
+}
+
+.form-check-input {
+  align-content: center;
+}
+
+.res-loc-img {
+  height: 300px;
+  width: 400px;
+}
+
+.table {
+  background-color: #444451;
+  height: 80px;
+  width: 80px;
+  margin: 10px;
+  border-radius: 100%;
+}
+
+.table-pars {
+  text-align: center;
+  color: white;
+}
+
+.dropdown-toggle {
+  font-family: 'Raleway', sans-serif;
+}
+
+
+
+
+
+/* REVIEWS */
+#reviewButton {
+  background-color: rgb(26, 25, 25);
+  border-color: rgb(26, 25, 25);
+  font-family: 'Raleway', sans-serif;
+}
+
+#reviewButton:hover {
+  background-color: rgba(15, 15, 15, 0.582);
+  border-color: rgba(150, 149, 147, 0.582);
+  box-shadow: 0px 15px 20px rgba(29, 29, 29, 0.6);
+  transform: translateY(-7px);
+}
+
+#reviewsForm {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#reviewButton {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin: auto;
+}
+
+#ratingDiv {
+  display: grid;
+}
+
+#rating {
+  display: block;
+  margin: auto;
+  width: 20%;
+}
+
+#r-name {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+}
+#r-date {
+  font-family: 'Raleway', sans-serif;
+  font-weight: lighter;
+}
+
+/* #r-rating {
+
+} */
+
+#r-review {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+}
+
+#review-h1 {
+  text-align: center;
+}
+
+.reviewBtnDiv {
+  display: grid;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.customerReviews {
+  margin-left: 33%;
+  margin-right: 33%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.customerReviews:nth-of-type(n+6) {
+  display: none;
+}
+
+.showReview {
+  display: block !important;
+}
+
+.hide-me {
+  display: none;
+}
+
+.textBold {
+  font-weight: bold;
+}
+
+
+
+
+/* CONTACTS */
+.contact-heads {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+/* ABOUT US */
+.about-open {
+  text-align: center;
+  font-family: 'Merriweather', serif;
+}
+
+.about-pars {
+  text-align: center;
+  margin-right: 15%;
+  margin-left: 15%;
+  font-family: 'Merriweather', serif;
+}
+
+
+
+
+
+/* BOOTSTRAP ELEMENTS */
+/* navbar */
+#navbarDropdown {
+  align-items: center;
+}
+
+#navbarSupportedContent {
+  text-align: end;
+}
+
+.navbar-brand {
+  font-family: 'Libre Bodoni', serif;
+}
+
+.dropdown-item {
+  font-family: 'Raleway', sans-serif;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(126, 124, 124, 0.4);
+}
+
+.hamburger-menu {
+  margin-top: 10px;
+}
+
+/* carousels */
+.carousel {
+  border-radius: 1rem;
+  height: 400px;
+  width: 525px;
+}
+
+.carousel-item {
+  border-radius: 1rem;
+}
+
+.carousel-imgs {
+  height: 400px;
+  width: 525px;
+  border-color: rgba(88, 87, 88, 0.3);
+  border-radius: 1rem;
+}
+
+/* footer */
+footer {
+  margin-bottom: 0px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.footer-contacts {
+  font-family: 'Raleway', sans-serif;
+}
+
+#copyright {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+#logo {
+  text-align: right;
+}
+
+#phone {
+  padding-bottom: 5px;
+}
+
+/* cards */
+.card {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: linen;
+  border: solid 1px;
+  border-color: rgb(136, 132, 132);
+}
+
+.card-text {
+  text-align: center;
+  font-family: 'Merriweather', serif;
+}
+
+.card-button {
+  background-color: rgb(26, 25, 25);
+  border-color: rgb(26, 25, 25);
+  font-family: 'Raleway', sans-serif;
+}
+
+.card-button:hover {
+  background-color: rgba(15, 15, 15, 0.582);
+  border-color: rgba(150, 149, 147, 0.582);
+  box-shadow: 0px 15px 20px rgba(29, 29, 29, 0.6);
+  transform: translateY(-7px);
+}
+
+.card-imgs {
+  width: auto;
+  height: 220px;
+  border-radius: 0.25rem;
+  margin-top: 5px;
+}
+
+.card:hover {
+  background-color: rgb(219, 207, 195);
+}
+
+.card-title {
+  text-align: center;
+}
