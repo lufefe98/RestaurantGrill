@@ -4,24 +4,24 @@ const moreBtn = document.querySelector('#showmore');
 
 let currentIndex = 5;
 
-moreBtn.addEventListener('click', () => {
-  const reviews = [...document.querySelectorAll('.customerReview:nth-of-type(n+6)')];
+// moreBtn.addEventListener('click', () => {
+//   const reviews = [...document.querySelectorAll('.customerReviews')];
 
-  for (let i = currentIndex; i < currentIndex; i++) {
-    if (reviews) {
-      reviews.classList.add('showReview');      
-    }
-  }
+//   for (let i = currentIndex; i <= reviews.length; i += 5) {
+//     if (reviews) {
+//       reviews.classList.add('showReview');      
+//     }
+//   }
 
 
-  currentIndex += 5;
+//   // currentIndex += 5;
   
-  // If you display all the elements then hide the show more button
-  if (currentIndex >= reviews.length) {
-    event.target.style.display = 'none';
-  }
-  
-})
+//   // If you display all the elements then hide the show more button
+//   if (currentIndex >= reviews.length) {
+//     moreBtn.style.display = 'none';
+//   }
+// })
+
 
 
 // ATTEMPT #2
@@ -44,3 +44,29 @@ moreBtn.addEventListener('click', () => {
 
 //   reviews.classList.add("textBold");
 // })
+
+//  ATTEMPT #3
+
+// Hide all reviews after the first 5 reviews
+
+document.querySelectorAll('.customerReviews:nth-of-type(n+6)').forEach(item => {
+  item.style.display = 'none';
+
+  // moreBtn.addEventListener('click', () => {
+  //   const reviews = document.querySelectorAll('.customerReviews');
+  
+  //   for (let i = currentIndex; i <= reviews.length; i += 5) {
+  //     if (reviews) {
+  //       reviews.classList.add('showReview');      
+  //     }
+  //   }
+  
+  
+    // currentIndex += 5;
+    
+    // If you display all the elements then hide the show more button
+  //   if (currentIndex >= reviews.length) {
+  //     moreBtn.style.display = 'none';
+  //   }
+  // })
+})
