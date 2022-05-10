@@ -1,6 +1,6 @@
 /* GENRAL HTML */
 body {
-  height: 100vh;
+  height: 100%;
   background-color: linen;
 }
 
@@ -72,6 +72,18 @@ hr.hr-1 {
   background-image: linear-gradient(to right, rgba(245, 236, 236, 0), rgba(199, 195, 195, 0.75), rgba(0, 0, 0, 0));
 }
 
+.reveal{
+  position: relative;
+  transform: translateX(150px);
+  opacity: 0;
+  transition: 2s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
 
 
 
@@ -84,6 +96,15 @@ hr.hr-1 {
   border: 1px solid rgba(61, 61, 61, 0.5);
   border-left: none;
   border-right: none;
+}
+
+.home-jumbos:nth-child(even) {
+  background-color: rgba(228, 209, 209, 0.4);
+  border-radius: 0.3rem;
+}
+
+.home-jumbos:nth-child(odd) {
+  border-radius: 0.3rem;
 }
 
 .home-imgs {
@@ -119,8 +140,6 @@ hr.hr-1 {
   text-align: center;
   font-family: 'Merriweather', serif;
 }
-
-
 
 
 
@@ -166,15 +185,26 @@ hr.hr-1 {
   border-right: none;
 }
 
+.location-jumbos:nth-child(odd) {
+  background-color: rgba(228, 209, 209, 0.4);
+  border-radius: 0.3rem;
+}
+
+.location-jumbos:nth-child(even) {
+  border-radius: 0.3rem;
+}
+
 .map {
-  width: 500px;
-  height: 400px;
+  width: 450px;
+  height: 350px;
   justify-content: center;
+  border-radius: 0.3rem;
 }
 
 .location-head {
   justify-content: center;
 }
+
 
 
 
@@ -250,6 +280,14 @@ label {
 
 #people-container {
   text-align: center;
+}
+
+#reservationsButton {
+  margin: auto;
+}
+
+.resBtnDiv {
+  display: grid;
 }
 
 .reservations-openPar {
@@ -361,23 +399,22 @@ label {
   margin-right: 33%;
   margin-top: 20px;
   margin-bottom: 20px;
+  border-radius: 0.3rem;
 }
 
 .customerReviews:nth-child(even) {
-  background-color: rgba(131, 127, 127, 0.4);
+  background-color: rgba(228, 209, 209, 0.4);
+  border-radius: 0.3rem;
 }
 
-.showReview {
+/* .showReview { No longer in use because we chose attempt #1
   display: block !important;
-}
+} */
 
-.hide-me {
+/* .hide-me { No longer in use because we chose attempt #1
   display: none;
-}
+} */
 
-.textBold {
-  font-weight: bold;
-}
 
 
 
@@ -508,7 +545,7 @@ footer {
   width: auto;
   height: 220px;
   border-radius: 0.25rem;
-  margin-top: 5px;
+  margin-top: 2px;
 }
 
 .card:hover {
