@@ -1,35 +1,38 @@
 <% layout('layouts/boilerplate') %>
 
-<div class="jumbotron">
-    <h1>Here is What Other customers Have to Say</h1>
-</div>
-    
+    <div class="jumbotron">
+        <h1>Here is What Other customers Have to Say</h1>
+    </div>
+
     <hr class="hr-1">
 
     <% for (r of reviews) {%>
         <section class="customerReviews">
 
-            <span id="r-name">
-                <%= r.name %>
-            </span> -
+            <div class="name-date-div">
+                <span class="r-name">
+                    <%= r.name %>
+                </span> -
 
-            <span id="r-date">
-                <%= r.date %>
-            </span>
+                <span class="r-date">
+                    <%= r.date %>
+                </span>
+            </div>
 
-            <div id="r-rating">
+            <div class="r-rating">
                 <%= r.rating %>/5
             </div>
 
-            <p id="r-review">
+            <p class="r-review">
                 <%= r.review %>
             </p>
 
         </section>
         <% } %>
 
-            <button id="showmore">See More Reviews</button>
-
+            <div class="reviewBtnDiv">
+                <button id="showmore" class="btn btn-secondary">See More Reviews</button>
+            </div>
 
 
 
@@ -41,7 +44,8 @@
                     <form action="/reviews" method="POST" id="reviewsForm">
                         <div>
                             <label for="name" class="form-label">Name:</label>
-                            <input type="text" class="form-control" class="name" placeholder="eg: John Smith" name="name">
+                            <input type="text" class="form-control" class="name" placeholder="eg: John Smith"
+                                name="name">
                         </div>
 
                         <div>
@@ -53,7 +57,7 @@
 
                         <div class="dateDiv">
                             <label for="date">Date:</label>
-                            
+
                             <input type="date" class="form-control" class="date" name="date" value="2022-01-01"
                                 min="01-01-2022" max="31-12-2022">
                         </div>
