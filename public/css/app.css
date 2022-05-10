@@ -265,24 +265,16 @@ label {
 .res-loc-img {
   height: 300px;
   width: 400px;
-}
-
-.table {
-  background-color: #444451;
-  height: 80px;
-  width: 80px;
-  margin: 10px;
-  border-radius: 100%;
-}
-
-.table-pars {
-  text-align: center;
-  color: white;
+  /* filter: blur(5px) */
 }
 
 .dropdown-toggle {
   font-family: 'Raleway', sans-serif;
 }
+
+/* .uncheckedRadio {
+  filter: grayscale(70%)
+} */
 
 
 
@@ -302,6 +294,10 @@ label {
   transform: translateY(-7px);
 }
 
+#review-h1 {
+  text-align: center;
+}
+
 #reviewsForm {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -313,6 +309,10 @@ label {
   margin: auto;
 }
 
+#showmore {
+  margin: auto;
+}
+
 #ratingDiv {
   display: grid;
 }
@@ -321,27 +321,32 @@ label {
   display: block;
   margin: auto;
   width: 20%;
+  text-align: center;
 }
 
-#r-name {
+.name-date-div {
+  text-align: center;
+}
+
+.r-name {
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
+  text-align: center;
 }
-#r-date {
+
+.r-date {
   font-family: 'Raleway', sans-serif;
   font-weight: lighter;
+  text-align: center;
 }
 
-/* #r-rating {
+.r-rating {
+ text-align: center;
+}
 
-} */
-
-#r-review {
+.r-review {
   font-family: 'Raleway', sans-serif;
   font-weight: 500;
-}
-
-#review-h1 {
   text-align: center;
 }
 
@@ -358,8 +363,8 @@ label {
   margin-bottom: 20px;
 }
 
-.customerReviews:nth-of-type(n+6) {
-  display: none;
+.customerReviews:nth-child(even) {
+  background-color: rgba(131, 127, 127, 0.4);
 }
 
 .showReview {
@@ -423,7 +428,7 @@ label {
 }
 
 .dropdown-item:hover {
-  background-color: rgba(126, 124, 124, 0.4);
+  background-color: rgba(131, 127, 127, 0.4);
 }
 
 .hamburger-menu {
