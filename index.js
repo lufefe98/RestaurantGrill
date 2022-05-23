@@ -30,11 +30,10 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 
 
-
 let reviews = [
     {   
         name: 'Todd',
-        date: '2022-04-25',
+        date: '22-04-25',
         rating: 4,
         review: 'Food is very decent.'
     },
@@ -135,16 +134,17 @@ app.get('/reviews', (req, res) => {
     res.render('pages/reviews', { reviews})
 })
 
+app.get('/stars.css', function(req, res) {
+    res.sendFile(__dirname + "/" + "stars.css");
+  });
+
 app.post('/reviews', (req, res) => {
     const { name, date, rating, review } = req.body
     reviews.unshift({ name, date, rating, review })
     res.redirect('/reviews')
-    // console.log(req.body)
 })
 
 // reservations
 app.get('/reservations', (req, res) => {
     res.render('pages/reservations')
 })
-
-
