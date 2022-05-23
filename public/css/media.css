@@ -6,7 +6,7 @@
   }
 @media screen and (min-width: 1115px) {
   .form-control{
-    width: 66.66%;
+    width: 50%;
   }
   }
 
@@ -21,7 +21,24 @@
         width: 202px;
     }
     .map {
-        width: 350px;
+      width: 350px;
+      height: 340px;
+    }
+    .res-location {
+      width: 50%;
+    }
+    .r-review {
+      margin-left: 20%;
+      margin-right: 20%;
+    }
+    input[type="text"] {
+      width: 66%;
+    }
+    input[type="email"] {
+      width: 66%;
+    }
+    #review {
+      width: 66%;
     }
   }
 @media screen and (max-width: 991px) {
@@ -29,8 +46,29 @@
       height: 72px;
       width: 362px;
     }
+    .map {
+      width: 100%;
+    }
+    .res-location {
+      width: 100%;
+    }
+    .res-loc-img {
+      height: 300px;
+      width: 100%;
+      margin: auto;
+    }
+    input[type="text"] {
+      width: 66%;
+    }
+    input[type="email"] {
+      width: 66%;
+    }
+    .res-loc-img {
+      height: 300px;
+      width: 405px;
+    }
   }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .menus-text {
       height: 96px;
       width: 257px;
@@ -64,6 +102,15 @@
       height: 300px;
       width: 400px;
     }
+    .map {
+      width: 66%;
+      margin: auto;
+      display: block;
+    }
+    .res-loc-img {
+      height: 350px;
+      width: 400px;
+    }
   }
 @media screen and (max-width: 500px) {
     .menus-text {
@@ -82,6 +129,9 @@
     height: 225px;
     width: 325px;
   }
+  .rating {
+    width: 133%;
+}
   }
 @media screen and (max-width: 414px) {
     .menus-text {
@@ -89,7 +139,7 @@
       width: 186px;
     }
     .map {
-        width: 325px;
+        width: 66%;
     }
     .carousel {
       height: 250px;
@@ -99,6 +149,14 @@
     height: 250px;
     width: 300px;
   }
+  .rating {
+    width: 133%;
+    right: 100%;
+}
+.res-loc-img {
+  height: 250px;
+  width: 300px;
+}
   }
 @media screen and (max-width: 360px) {
     .menus-text {
@@ -114,6 +172,10 @@
     .form-control{
       width: 50%;
     }
+    .rating {
+      width: 133%;
+      right: 100%;
+  }
   }
 @media screen and (max-width: 308px) {
       .nav-h2 {
