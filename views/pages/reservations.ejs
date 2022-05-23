@@ -26,8 +26,9 @@
                     <div class="container" id="res-loc-radios">
                         <div class="row">
 
-                            <div class="form-check res-location col-6">
-                                <h5>South Beach</h5>
+
+                            <div class="form-check res-location">
+                                <h5 class="loc-h5">South Beach</h5>
 
                                 <label class="form-check-label" for="southBeachRadio">
                                     <input class="form-check-input" type="radio" name="location" id="southBeachRadio">
@@ -38,8 +39,8 @@
                             </div>
 
 
-                            <div class="form-check res-location col-6">
-                                <h5>Umhlanga</h5>
+                            <div class="form-check res-location">
+                                <h5 >Umhlanga</h5>
 
                                 <label class="form-check-label" for="umhlangaRadio">
                                     <input class="form-check-input" type="radio" name="location" id="umhlangaRadio">
@@ -48,6 +49,7 @@
                                         alt="">
                                 </label>
                             </div>
+
 
                         </div>
                     </div>
@@ -58,17 +60,20 @@
 
                 <div>
                     <label for="name" class="form-label">Name:</label>
-                    <input type="text" class="form-control" class="name" placeholder="eg: John Smith" name="name">
+                    <input type="text" class="form-control" class="name" placeholder="eg: John Smith" name="name"
+                        required>
                 </div>
 
                 <div>
                     <label for="phone" class="form-label">Phone Number:</label>
-                    <input type="text" class="form-control" id="inputPhone" name="phone" placeholder="eg: 031 000 0000">
+                    <input type="text" class="form-control" id="inputPhone" name="phone" placeholder="eg: 031 000 0000"
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
                 </div>
 
                 <div>
                     <label for="email" class="form-label">Email address:</label>
-                    <input type="email" class="form-control" class="email" placeholder="name@example.com" name="email">
+                    <input type="email" class="form-control" class="email" placeholder="name@example.com" name="email"
+                        required>
                 </div>
                 <div class="form-text emailHelp">We'll never share your email with anyone else.</div>
 
@@ -78,8 +83,7 @@
                 <div class="dateDiv">
                     <label for="date">Date:</label>
 
-                    <input type="date" class="form-control" class="date" name="date" value="2022-01-01" min="01-01-2022"
-                        max="31-12-2022">
+                    <input type="date" class="form-control" class="date" name="date" min="01-01-2022" max="31-12-2022">
                 </div>
                 <!-- Calendar -->
 
@@ -95,7 +99,6 @@
                         <p>Number of People</p>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item">1</a></li>
                         <li><a class="dropdown-item">2</a></li>
                         <li><a class="dropdown-item">3</a></li>
                         <li><a class="dropdown-item">4</a></li>
@@ -110,17 +113,17 @@
                 <!-- Number of People -->
 
 
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <div class="form-check" id="res-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
                     <label class="form-check-label" for="flexCheckDefault">
                         Are you happy with the information above?
                     </label>
                 </div>
 
-                <button type="submit" class="btn btn-secondary" id="reservationsButton">Submit</button>
+                <div class="resBtnDiv">
+                    <button type="submit" class="btn btn-secondary" id="reservationsButton">Submit</button>
+                </div>
             </form>
 
         </div>
     </div>
-
-    <script src="/javascripts/reservations.js"></script>
