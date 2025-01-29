@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Boilerplate</title>
+    <!-- font awesome -->
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css"
+        integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap and CSS files -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../../public/css/app.css" rel="stylesheet">
+    <link href="../../public/css/media.css" rel="stylesheet">
+    <link href="../../public/css/stars.css" rel="stylesheet">
+
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-light">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="../home.html">
+                <h2 class="nav-h2">
+                    <i class="fas fa-utensils"></i> Restaurant Grill
+                </h2>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Dropdown Menu List -->
+            <div class="collapse navbar-collapse hamburger-menu" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <div class="d-flex flex-row justify-content-end">
+
+                        <div class="d-flex flex-column">
+                            <li>
+                                <a href="/menu" class="dropdown-item p-4">
+                                    <i class="fa-solid fa-pizza-slice"></i> Menu
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/gallery" class="dropdown-item p-4">
+                                    <i class="fa-solid fa-camera"></i> Gallery
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/reviews" class="dropdown-item p-4">
+                                    <i class="fa-solid fa-comments"></i> Reviews
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/reservations" class="dropdown-item p-4">
+                                    <i class="fa-solid fa-calendar"></i> Want to make a booking?
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <a href="/locations" class="dropdown-item p-4">
+                                    <i class="fa-solid fa-location-pin"></i> Where to Find Us
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/contacts" class="dropdown-item p-4">
+                                    <i class="fa-solid fa-envelope"></i> Contact Us
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/about" class="dropdown-item p-4">
+                                    <i class="fa-solid fa-circle-question"></i> About Us
+                                </a>
+                            </li>
+                        </div>
+
+                    </div>
+                </ul>
+            </div>
+            <!-- Dropdown Menu List -->
+
+        </div>
+    </nav>
+
+    <div class="jumbotron">
+        <h1>Here is What Other customers Have to Say</h1>
+    </div>
+
+    <hr class="hr-1">
+
+    <% for (r of reviews) {%>
+        <section class="customerReviews">
+
+            <div class="name-date-div">
+                <span class="r-name">
+                    <%= r.name %>
+                </span> -
+
+                <span class="r-date" data-date="2022-05-16">
+                    <%= r.date %>
+                </span>
+            </div>
+
+            <div class="r-rating">
+                <%= r.rating %>/5
+            </div>
+
+            <p class="r-review">
+                <%= r.review %>
+            </p>
+
+        </section>
+        <% } %>
+
+            <div class="reviewBtnDiv">
+                <button id="showmore" class="btn btn-secondary">See More Reviews</button>
+            </div>
+
+
+
+            <div class="container">
+                <div class="row">
+
+                    <h2 id="review-h1">What do you think of our service?</h2>
+
+                    <form action="/reviews" method="POST" id="reviewsForm">
+                        <div>
+                            <label for="name" class="form-label">Name:</label>
+                            <input type="text" class="form-control" class="name" placeholder="eg: John Smith"
+                                name="name" required>
+                        </div>
+
+                        <div>
+                            <label for="email" class="form-label">Email address:</label>
+                            <input type="email" class="form-control" class="email" placeholder="name@example.com"
+                                name="email" required>
+                        </div>
+                        <div class="form-text emailHelp">We'll never share your email with anyone else.</div>
+
+                        <div class="dateDiv">
+                            <label for="date">Date:</label>
+
+                            <input type="date" class="form-control" class="date" name="date" value="" min="01-01-2022"
+                                max="31-12-2022">
+                        </div>
+
+
+                        <div class="rating">
+                            <input type="radio" name="rating" id="star5" value="5">
+                            <label for="star5" title="Excellent"></label>
+
+                            <input type="radio" name="rating" id="star4" value="4">
+                            <label for="star4" title="Very Good"></label>
+
+                            <input type="radio" name="rating" id="star3" value="3">
+                            <label for="star3" title="Satisfactory"></label>
+
+                            <input type="radio" name="rating" id="star2" value="2">
+                            <label for="star2" title="Not Satisfactory"></label>
+
+                            <input type="radio" name="rating" id="star1" value="1">
+                            <label for="star1" title="Awful"></label>
+                        </div>
+
+
+
+                        <div>
+                            <label for="review" class="form-label">Write Your Review:</label>
+                            <textarea class="form-control" id="review" rows="5" name="review" required></textarea>
+                        </div>
+
+                        <div class="reviewBtnDiv">
+                            <button class="btn btn-secondary" id="reviewButton">Submit Review</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+            <script src="/javascripts/reviews.js"></script>
+
+
+
+            <footer class="footer bg-dark py-3 mt-auto">
+
+
+                <section class="text-muted">
+
+                    <!-- Social Media and Contact Details -->
+                    <div class="container">
+
+                        <div class="row flex-row d-flex mb-3">
+
+                            <div class="p-2 col-sm-6 col-md-6 col-lg-6">
+                                <div class="col-sm-12 col-md-6 col-lg-4 col-auto me-md-auto">
+                                    <p class="footer-contacts">031 --- ----</p>
+                                </div>
+                            </div>
+
+                            <div class="p-2 col-sm-6 col-md-6 col-lg-6">
+                                <div class="col-sm-12 col-md-6 col-lg-4 col-auto ms-md-auto">
+                                    <p class="footer-contacts footer-right">restaurantgrill@outlook.com</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row flex-row d-flex mb-3">
+
+                            <div class="p-2 col-sm-6 col-md-6 col-lg-6">
+                                <div class="col-sm-12 col-md-6 col-lg-4 col-auto me-md-auto">
+                                    <p class="footer-contacts">
+                                        <a href="#">
+                                            <i class="fab fa-instagram"></i> Restaurant_Grill
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="p-2 col-sm-6 col-md-6 col-lg-6">
+                                <div class="col-sm-12 col-md-6 col-lg-4 col-auto ms-md-auto">
+                                    <p class="footer-contacts footer-right">
+                                        <a href="#">
+                                            <i class="fab fa-facebook"></i> Restaurant Grill
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Social Media and Contact Details -->
+
+
+                    <!-- Brand Logo -->
+                    <div class="d-flex flex-row mb-3">
+
+                        <div class="p-2 mx-auto">
+                            <a class="navbar-brand" href="/">
+                                <h2>
+                                    <i class="fas fa-utensils"></i> Restaurant Grill
+                                </h2>
+                            </a>
+                        </div>
+
+                    </div>
+                    <!-- Brand Logo -->
+                </section>
+
+                <hr class="hr-1">
+
+                <div class="container" id="copyright">
+                    <span class="text-muted">&copy; Restaurant Grill 2022</span>
+                </div>
+            </footer>
+
+
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+                integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+                integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script>
+
+
+
+
+
+
+
+</body>
+
+</html>

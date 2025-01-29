@@ -1,0 +1,473 @@
+/* GENRAL HTML ELEMENTS */
+body {
+    height: 100%;
+    background-color: linen;
+  }
+  a {
+    text-decoration: none;
+  }
+  img {
+    border-radius: 1rem;
+  }
+  
+  /* texts */
+  h1 {
+    font-family: 'Libre Bodoni', serif;
+    text-align: center;
+  }
+  h2 {
+    font-family: 'Libre Bodoni', serif;
+  }
+  h3 {
+    font-family: 'Libre Bodoni', serif;
+  }
+  h5 {
+    font-family: 'Libre Bodoni', serif;
+  }
+  hr.hr-1 {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(245, 236, 236, 0), rgba(199, 195, 195, 0.75), rgba(0, 0, 0, 0));
+  }
+  
+  /* forms */
+  label {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+  }
+  input[type="text"] {
+    font-family: 'Raleway', sans-serif;
+  }
+  input[type="email"] {
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  .form-control {
+    margin: auto;
+  }
+  .emailHelp {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+  }
+  .dateDiv {
+    display: grid;
+  }
+  .date {
+    margin: auto;
+    width: 25%;
+  }
+  
+  /* divs */
+  .container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  /* javascript effects */
+  .reveal{
+    position: relative;
+    transform: translateX(150px);
+    opacity: 0;
+    transition: 2s all ease;
+  }
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  
+  
+  
+  
+  /* HOME */
+  .home-jumbos {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 10px;
+    border: 1px solid rgba(61, 61, 61, 0.5);
+    border-left: none;
+    border-right: none;
+  }
+  .home-jumbos:nth-child(even) {
+    background-color: rgba(228, 209, 209, 0.4);
+    border-radius: 0.3rem;
+  }
+  .home-jumbos:nth-child(odd) {
+    border-radius: 0.3rem;
+  }
+  .home-imgs {
+    border-radius: 0.5rem;
+    height: 375px;
+    width: 450px;
+    justify-content: center;
+  }
+  .home-imgs-div {
+    display: flex;
+    justify-content: center;
+  }
+  .home-h2 {
+    text-align: center;
+    text-decoration-color: black;
+    font-family: 'Libre Bodoni', serif;
+  }
+  .home-links {
+    color: black;
+    text-decoration: underline;
+  }
+  .home-links:hover {
+    text-shadow: 0px 15px 20px rgba(29, 29, 29, 0.6);
+    color: black;
+  }
+  .home-pars {
+    text-align: center;
+    font-family: 'Merriweather', serif;
+  }
+  
+  
+  
+  
+  
+  /* CONTACTS */
+  .contact-card {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  
+  
+  
+  
+  /* GALLERY */
+  .gallery-carousel {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .carousel-heading {
+    text-align: center;
+  }
+  
+  
+  
+  
+  
+  /* LOCATIONS */
+  .location-jumbos {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 10px;
+    border: 1px solid rgba(61, 61, 61, 0.5);
+    border-left: none;
+    border-right: none;
+  }
+  .location-jumbos:nth-child(odd) {
+    background-color: rgba(228, 209, 209, 0.4);
+    border-radius: 0.3rem;
+  }
+  .location-jumbos:nth-child(even) {
+    border-radius: 0.3rem;
+  }
+  .map {
+    justify-content: center;
+    border-radius: 0.3rem;
+    margin-top: 18px;
+    width: 350px;
+        height: 340px;
+  }
+  .location-head {
+    justify-content: center;
+  }
+  
+  
+  
+  
+  
+  /* RESERVATIONS */
+  input[type="date"] {
+    font-family: 'Raleway', sans-serif;
+    font-weight: lighter;
+    text-align: center;
+    margin: auto;
+    width: 25%;
+  }
+  [type=radio] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  [type=radio] + img {
+    cursor: pointer;
+  }
+  [type=radio]:checked + img {
+    outline: 3px solid rgba(128, 130, 243, 0.705);
+    box-shadow: 0 0 40px rgba(233, 72, 51, 0.7);
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.7))
+  }
+  [type=radio]:hover + img {
+    box-shadow: 0 0 40px rgba(233, 72, 51, 0.7);
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.7))
+  }
+  input,
+  label {
+    margin: .4rem 0;
+  }
+  #table-head {
+    text-align: center;
+  }
+  #reservationsButton {
+    background-color: rgb(26, 25, 25);
+    border-color: rgb(26, 25, 25);
+  }
+  #reservationsButton:hover {
+    background-color: rgba(15, 15, 15, 0.582);
+    border-color: rgba(150, 149, 147, 0.582);
+    box-shadow: 0px 15px 20px rgba(29, 29, 29, 0.6);
+    transform: translateY(-7px);
+  }
+  #res-date-label {
+    text-align: center;
+  }
+  #res-loc-radios {
+    text-align: center;
+  }
+  #reservationsButton {
+    font-family: 'Raleway', sans-serif;
+  }
+  #max-people-res {
+    font-family: 'Raleway', sans-serif;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  #people-container {
+    text-align: center;
+  }
+  #reservationsButton {
+    margin: auto;
+  }
+  .resBtnDiv {
+    display: grid;
+  }
+  .reservations-openPar {
+    font-family: 'Merriweather', serif;
+    text-align: center;
+    margin: 15px 35px 15px;
+  }
+  .loc-h5 {
+    text-align: center;
+  }
+  .form-check-input {
+    align-content: center;
+  }
+  .dropdown-toggle {
+    font-family: 'Raleway', sans-serif;
+  }
+  .res-location {
+    width: 50%;
+  }
+  .res-loc-img {
+    width: 405px;
+    height: 350px;
+  }
+  #res-check {
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:center;
+    align-items:center;
+  }
+  #flexCheckDefault {
+    margin-right: 5px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  /* REVIEWS */
+  #reviewButton {
+    background-color: rgb(235, 227, 227);
+    border-color: rgb(26, 25, 25);
+    font-family: 'Raleway', sans-serif;
+  }
+  #reviewButton:hover {
+    background-color: rgba(15, 15, 15, 0.582);
+    border-color: rgba(150, 149, 147, 0.582);
+    box-shadow: 0px 15px 20px rgba(29, 29, 29, 0.6);
+    transform: translateY(-7px);
+  }
+  #review-h1 {
+    text-align: center;
+  }
+  #reviewsForm {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  #reviewButton {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin: auto;
+  }
+  #showmore {
+    margin: auto;
+  }
+  .name-date-div {
+    text-align: center;
+  }
+  .r-name {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    text-align: center;
+  }
+  .r-date {
+    font-family: 'Raleway', sans-serif;
+    font-weight: lighter;
+    text-align: center;
+  }
+  .r-rating {
+   text-align: center;
+  }
+  .r-review {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    text-align: center;
+  }
+  .reviewBtnDiv {
+    display: grid;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .customerReviews {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 0.3rem;
+  }
+  .customerReviews:nth-child(even) {
+    background-color: rgba(228, 209, 209, 0.4);
+    border-radius: 0.3rem;
+  }
+  
+  
+  
+  
+  
+  /* CONTACTS */
+  .contact-heads {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  
+  
+  
+  
+  /* ABOUT US */
+  .about-open {
+    text-align: center;
+    font-family: 'Merriweather', serif;
+  }
+  .about-pars {
+    text-align: center;
+    margin-right: 15%;
+    margin-left: 15%;
+    font-family: 'Merriweather', serif;
+  }
+  
+  
+  
+  
+  
+  /* BOOTSTRAP ELEMENTS */
+  /* navbar */
+  #navbarDropdown {
+    align-items: center;
+  }
+  #navbarSupportedContent {
+    text-align: end;
+  }
+  .navbar-brand {
+    font-family: 'Libre Bodoni', serif;
+  }
+  .dropdown-item {
+    font-family: 'Raleway', sans-serif;
+  }
+  .dropdown-item:hover {
+    background-color: rgba(131, 127, 127, 0.4);
+  }
+  .hamburger-menu {
+    margin-top: 10px;
+  }
+  
+  /* carousels */
+  .carousel {
+    border-radius: 1rem;
+    height: 400px;
+    width: 525px;
+  }
+  .carousel-item {
+    border-radius: 1rem;
+  }
+  .carousel-imgs {
+    height: 400px;
+    width: 525px;
+    border-color: rgba(88, 87, 88, 0.3);
+    border-radius: 1rem;
+  }
+  
+  /* footer */
+  footer {
+    margin-bottom: 0px;
+    margin-top: 10px;
+    width: 100%;
+  }
+  .footer-contacts {
+    font-family: 'Raleway', sans-serif;
+  }
+  #copyright {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+  }
+  #logo {
+    text-align: right;
+  }
+  #phone {
+    padding-bottom: 5px;
+  }
+  
+  /* cards */
+  .card {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: linen;
+    border: solid 1px;
+    border-color: rgb(136, 132, 132);
+  }
+  .card-text {
+    text-align: center;
+    font-family: 'Merriweather', serif;
+  }
+  .card-button {
+    background-color: rgb(26, 25, 25);
+    border-color: rgb(26, 25, 25);
+    font-family: 'Raleway', sans-serif;
+  }
+  .card-button:hover {
+    background-color: rgba(15, 15, 15, 0.582);
+    border-color: rgba(150, 149, 147, 0.582);
+    box-shadow: 0px 15px 20px rgba(29, 29, 29, 0.6);
+    transform: translateY(-7px);
+  }
+  .card-imgs {
+    width: auto;
+    height: 220px;
+    border-radius: 0.25rem;
+    margin-top: 2px;
+  }
+  .card:hover {
+    background-color: rgb(219, 207, 195);
+  }
+  .card-title {
+    text-align: center;
+  }
+  
