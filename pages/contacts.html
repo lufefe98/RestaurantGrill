@@ -44,7 +44,7 @@
     <nav class="navbar navbar-light">
         <div class="container-fluid">
 
-            <a class="navbar-brand" href="../home.html">
+            <a class="navbar-brand" href="./home.html">
                 <h2 class="nav-h2">
                     <i class="fas fa-utensils"></i> Restaurant Grill
                 </h2>
@@ -63,44 +63,39 @@
 
                         <div class="d-flex flex-column">
                             <li>
-                                <a href="/menu" class="dropdown-item p-4">
+                                <a href="./menu.html" class="dropdown-item p-4">
                                     <i class="fa-solid fa-pizza-slice"></i> Menu
                                 </a>
                             </li>
 
                             <li>
-                                <a href="/gallery" class="dropdown-item p-4">
+                                <a href="./gallery.html" class="dropdown-item p-4">
                                     <i class="fa-solid fa-camera"></i> Gallery
                                 </a>
                             </li>
 
                             <li>
-                                <a href="/reviews" class="dropdown-item p-4">
+                                <a href="./reviews.html" class="dropdown-item p-4">
                                     <i class="fa-solid fa-comments"></i> Reviews
                                 </a>
                             </li>
 
                             <li>
-                                <a href="/reservations" class="dropdown-item p-4">
+                                <a href="./reservations.html" class="dropdown-item p-4">
                                     <i class="fa-solid fa-calendar"></i> Want to make a booking?
                                 </a>
                             </li>
 
 
                             <li>
-                                <a href="/locations" class="dropdown-item p-4">
+                                <a href="./locations.html" class="dropdown-item p-4">
                                     <i class="fa-solid fa-location-pin"></i> Where to Find Us
                                 </a>
                             </li>
 
-                            <li>
-                                <a href="/contacts" class="dropdown-item p-4">
-                                    <i class="fa-solid fa-envelope"></i> Contact Us
-                                </a>
-                            </li>
 
                             <li>
-                                <a href="/about" class="dropdown-item p-4">
+                                <a href="./about.html" class="dropdown-item p-4">
                                     <i class="fa-solid fa-circle-question"></i> About Us
                                 </a>
                             </li>
@@ -114,134 +109,55 @@
         </div>
     </nav>
 
-    <h1>Want to Make a Booking?</h1>
-
     <div class="jumbotron">
-        <p class="reservations-openPar">
-            Are you very busy and dont have time to make a phone call to us and make a reservations?
-        </p>
-        <p class="reservations-openPar">
-            We can make that easy for you by allowing you make a booking with us on the go at our South Beach and
-            Umhlanga restarants here on our website.
-        </p>
+        <h1>Contact Us
+        </h1>
+        <hr class="hr-1">
     </div>
 
-    <hr class="hr-1">
-
     <div class="container">
-        <div class="row">
-
-            <form action="/reservations" method="POST">
-
-                <!-- Location -->
-                <fieldset>
-                    <h3 id="table-head">Select Location</h3>
-
-                    <div class="container" id="res-loc-radios">
-                        <div class="row">
-
-
-                            <div class="form-check res-location">
-                                <h5 class="loc-h5">South Beach</h5>
-
-                                <label class="form-check-label" for="southBeachRadio">
-                                    <input class="form-check-input" type="radio" name="location" id="southBeachRadio">
-                                    <img class="res-loc-img" id="southBeachResImg"
-                                        src="https://media.istockphoto.com/photos/durban-golden-mile-beach-with-white-sand-and-skyline-south-africa-picture-id1336186198?b=1&k=20&m=1336186198&s=170667a&w=0&h=ucTMb8I_hvhgdDs7gmlliFiSN2ClVy6_8x0ToaDQxPY="
-                                        alt="">
-                                </label>
-                            </div>
-
-
-                            <div class="form-check res-location">
-                                <h5>Umhlanga</h5>
-
-                                <label class="form-check-label" for="umhlangaRadio">
-                                    <input class="form-check-input" type="radio" name="location" id="umhlangaRadio">
-                                    <img class="res-loc-img" id="umhlangaResImg"
-                                        src="https://media.istockphoto.com/photos/view-the-sunset-at-the-umhlanga-rocks-lighthouse-picture-id180725394?b=1&k=20&m=180725394&s=170667a&w=0&h=fM-aNd3F1wx03X-Ws2J94x4BrSlj8KJGAt3AL_ngm2Y="
-                                        alt="">
-                                </label>
-                            </div>
-
-
-                        </div>
-                    </div>
-                </fieldset>
-                <!-- Location -->
-
-                <!-- Personal Details -->
-
-                <div>
-                    <label for="name" class="form-label">Name:</label>
-                    <input type="text" class="form-control" class="name" placeholder="eg: John Smith" name="name"
-                        required>
+        <div class="row d-flex flex-row">
+            <div class="card contact-card col-sm-7 col-md-7 col-lg-3 mx-auto">
+                <img src="https://media.istockphoto.com/photos/latin-american-coffee-shop-employee-accepts-a-preorder-on-a-mobile-picture-id1293175094?b=1&k=20&m=1293175094&s=170667a&w=0&h=Mk8o_rpKPyLadXJ3Wi4DejMtzP7-M1ecyo8l180dJ08="
+                    class="card-img-top card-imgs" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Want to Call Us?</h5>
+                    <p class="card-text contact-text">South Beach: 031 --- ----</p>
+                    <p class="card-text contact-text">Umhlanga: 031 --- ----</p>
+                    <p class="card-text contact-text">Westville: 031 --- ----</p>
                 </div>
+            </div>
 
-                <div>
-                    <label for="phone" class="form-label">Phone Number:</label>
-                    <input type="text" class="form-control" id="inputPhone" name="phone" placeholder="eg: 031 000 0000"
-                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+            <div class="card contact-card col-sm-7 col-md-7 col-lg-3 mx-auto">
+                <img src="https://images.unsplash.com/photo-1581349437898-cebbe9831942?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8ZW1haWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                    class="card-imgs" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Send us an Email</h5>
+                    <p class="card-text contact-text">restaurantgrill@outlook.com</p>
                 </div>
+            </div>
 
-                <div>
-                    <label for="email" class="form-label">Email address:</label>
-                    <input type="email" class="form-control" class="email" placeholder="name@example.com" name="email"
-                        required>
-                </div>
-                <div class="form-text emailHelp">We'll never share your email with anyone else.</div>
-
-                <!-- Personal Details -->
-
-                <!-- Calendar -->
-                <div class="dateDiv">
-                    <label for="date">Date:</label>
-
-                    <input type="date" class="form-control" class="date" name="date" min="01-01-2022" max="31-12-2022">
-                </div>
-                <!-- Calendar -->
-
-                <!-- Number of People -->
-                <div class="dropdown mx-auto" id="people-container">
-                    <p id="max-people-res">
-                        How many people will you be bringing along? <strong> (maximum of 10 people per reservation)
-                        </strong>
+            <div class="card contact-card col-sm-7 col-md-7 col-lg-3 mx-auto">
+                <img src="https://images.unsplash.com/photo-1579869847557-1f67382cc158?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c29jaWFsJTIwbWVkaWF8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                    class="card-imgs" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Follow Us</h5>
+                    <p class="card-text contact-text">
+                        <a href="" class="social-media">
+                            <i class="fab fa-instagram"></i> Restaurant_Grill
+                        </a>
                     </p>
-
-                    <button class="btn btn-secondary dropdown-toggle mx-auto" type="button" id="dropdownMenuButton1"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <p>Number of People</p>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item">2</a></li>
-                        <li><a class="dropdown-item">3</a></li>
-                        <li><a class="dropdown-item">4</a></li>
-                        <li><a class="dropdown-item">5</a></li>
-                        <li><a class="dropdown-item">6</a></li>
-                        <li><a class="dropdown-item">7</a></li>
-                        <li><a class="dropdown-item">8</a></li>
-                        <li><a class="dropdown-item">9</a></li>
-                        <li><a class="dropdown-item">10</a></li>
-                    </ul>
+                    <p class="card-text contact-text">
+                        <a href="" class="social-media">
+                            <i class="fa-brands fa-facebook"></i> Restaurant Grill
+                        </a>
+                    </p>
                 </div>
-                <!-- Number of People -->
-
-
-                <div class="form-check" id="res-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Are you happy with the information above?
-                    </label>
-                </div>
-
-                <div class="resBtnDiv">
-                    <button type="submit" class="btn btn-secondary" id="reservationsButton">Submit</button>
-                </div>
-            </form>
-
+            </div>
         </div>
     </div>
 
+    <hr class="hr-1">
 
 
     <footer class="footer bg-dark py-3 mt-auto">
