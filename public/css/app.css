@@ -18,6 +18,12 @@ img {
   border-radius: 1rem;
 }
 
+main {
+  height: auto;
+  width: 100%;
+  padding: 50px;
+}
+
 /* texts */
 h1 {
   font-family: 'Libre Bodoni', serif;
@@ -77,8 +83,16 @@ input[type="email"] {
 
 /* divs */
 .container {
+  width: 100%;
   margin-top: 50px;
   margin-bottom: 50px;
+}
+
+.card-flex-row {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 350px;
 }
 
 /* javascript effects */
@@ -515,14 +529,29 @@ footer {
 }
 
 /* cards */
+
 .card {
+  width: 30%;
+  height: 35%;
   margin-top: 20px;
   margin-bottom: 20px;
   background-color: linen;
   padding: 0px;
   padding-bottom: 10px;
-  border: solid 1px;
-  border-color: rgb(136, 132, 132);
+  border: solid 1px rgb(136, 132, 132);
+}
+
+.card-body {
+  border: 1px solid rgb(136, 132, 132);
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.card-body p {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
 }
 
 .card-text {
