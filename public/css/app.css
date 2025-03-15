@@ -22,6 +22,7 @@ main {
   height: auto;
   width: 100%;
   padding: 50px;
+  margin-bottom: 50px;
 }
 
 /* texts */
@@ -203,15 +204,11 @@ input[type="email"] {
   border: 1px solid rgba(61, 61, 61, 0.5);
   border-left: none;
   border-right: none;
+  border-radius: 0.3rem;
 }
 
 .location-jumbos:nth-child(odd) {
   background-color: rgba(228, 209, 209, 0.4);
-  border-radius: 0.3rem;
-}
-
-.location-jumbos:nth-child(even) {
-  border-radius: 0.3rem;
 }
 
 .location-card {
@@ -224,14 +221,12 @@ input[type="email"] {
   border: none;
   margin-top: 20px;
   margin-bottom: 20px;
-  padding: 0px;
-  padding-bottom: 10px;
 }
 
 .location-imgs {
-    width: 55%;
-    height: 175px;
-    border-radius: 0.25rem;
+  width: 55%;
+  height: 175px;
+  border-radius: 0.25rem;
 }
 
 .location-card-body {
@@ -572,29 +567,23 @@ footer {
 
 .card {
   width: 30%;
-  height: 35%;
+  height: 420px;
   margin-top: 20px;
   margin-bottom: 20px;
   background-color: linen;
   padding: 0px;
-  padding-bottom: 10px;
   border: solid 1px rgb(136, 132, 132);
 }
 
 .card-body {
-  border: 1px solid rgb(136, 132, 132);
   border-bottom-left-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
 }
 
-.card-body p {
+.card-text {
   display: flex;
   justify-content: center;
   width: 100%;
-  text-align: center;
-}
-
-.card-text {
   text-align: center;
   font-family: 'Merriweather', serif;
 }
