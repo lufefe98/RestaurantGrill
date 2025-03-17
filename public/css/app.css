@@ -541,27 +541,67 @@ label {
 
 /* footer */
 footer {
-  margin-bottom: 0px;
-  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 250px;
   width: 100%;
+  background: rgb(33, 37, 41);
+}
+
+footer section {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-logo, .footer-address, .footer-contacts {
+  color: white;
 }
 
 .footer-contacts {
   font-family: 'Raleway', sans-serif;
 }
 
-#copyright {
+.footer-socials {
+  width: 100px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.footer-socials a {
+  margin: 15px;
+  color: white;
+}
+
+.fa-facebook:hover {
+  color: rgb(54, 54, 202);
+}
+
+.fa-instagram:hover {
+  color: rgb(149, 30, 149);
+}
+
+.copyright {
+  color: white;
+}
+
+#footer-copyright {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 50px;
+  padding-left: 50px;
+  height: 20%;
+  font-size: large;
   text-align: center;
   font-family: 'Raleway', sans-serif;
 }
 
-#logo {
+/* #logo {
   text-align: right;
 }
 
 #phone {
   padding-bottom: 5px;
-}
+} */
 
 /* cards */
 
