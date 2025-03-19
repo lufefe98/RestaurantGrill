@@ -557,6 +557,9 @@ footer section {
 .footer-logo, .footer-address, .footer-contacts {
   color: white;
 }
+.footer-slogan {
+  font-size: small;
+}
 
 .footer-contacts {
   font-family: 'Raleway', sans-serif;
