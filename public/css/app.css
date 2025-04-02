@@ -263,12 +263,53 @@ input[type="email"] {
 
 
 /* RESERVATIONS */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  background: rgba(211, 184, 199, 0.211);
+  border-radius: 0.25rem;
+}
+
 input[type="date"] {
   font-family: 'Raleway', sans-serif;
   font-weight: lighter;
   text-align: center;
   margin: auto;
   width: 25%;
+  border: none;
+  font-weight: 500;
+  color: #6c757d;
+  border-radius: 5px;
+  font-family: 'Raleway', sans-serif;
+}
+
+input[type="time"] {
+  border: none;
+  text-align: center;
+  font-weight: 500;
+  color: #6c757d;
+  border-radius: 5px;
+  font-family: 'Raleway', sans-serif;
+}
+
+input[type="text"], 
+input[type="phone"], 
+input[type="email"], 
+input[type="date"], 
+input[type="time"] {
+  border-radius: 2px;
+  padding: 8px;
+}
+
+input[type="text"]:focus, 
+input[type="phone"]:focus, 
+input[type="email"]:focus, 
+input[type="date"]:focus, 
+input[type="time"]:focus {
+  outline: none;
+  border: 2px solid rgba(182, 69, 69, 0.27);
 }
 
 [type=radio] {
@@ -298,8 +339,38 @@ label {
   margin: .4rem 0;
 }
 
+label {
+  font-weight: bold;
+}
+
 #table-head {
   text-align: center;
+}
+
+.input-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+}
+
+.input-div input {
+  width: 100%;
+  border: none;
+}
+
+.date-inputs {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.date-inputs input {
+  width: 80%;
+}
+
+span.form-text {
+  margin-bottom: 20px;
 }
 
 #reservationsButton {
@@ -308,10 +379,12 @@ label {
 }
 
 #reservationsButton:hover {
-  background-color: rgba(15, 15, 15, 0.582);
+  background-color: rgba(158, 143, 113, 0.582);
   border-color: rgba(150, 149, 147, 0.582);
   box-shadow: 0px 15px 20px rgba(29, 29, 29, 0.6);
-  transform: translateY(-7px);
+  transform: translateY(-.5px);
+  color: black;
+  font-weight: bolder;
 }
 
 #res-date-label {

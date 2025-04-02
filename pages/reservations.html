@@ -164,8 +164,46 @@
                 <!-- Location -->
 
                 <!-- Personal Details -->
+                 <h3>
+                    Book a table
+                 </h3>
 
-                <div>
+                <div class="input-div">
+                    <label for="name">Name</label>
+                    <input type="text" name="" id="" placeholder="eg: John Smith" required>
+                </div>
+
+                <div class="input-div">
+                    <label for="phone">Phone Number</label>
+                    <input type="phone" name="phone" id="" placeholder="eg: 031 000 0000"
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="" placeholder="name@emailaddress.com" required>
+                </div>
+
+                <span class="form-text">
+                    We'll never share your details with anyone else.
+                </span>
+
+                <h3>
+                    Set a Date
+                </h3>
+
+                <div class="date-inputs">
+                    <div class="input-div">
+                        <label for="date">Date</label>
+                        <input type="date" name="date" id="date" placeholder="Pick a Day">
+                    </div>
+    
+                    <div class="input-div">
+                        <label for="time">Time</label>
+                        <input type="time" name="time" id="time">
+                    </div>
+                </div>
+
+
+                <!-- <div>
                     <label for="name" class="form-label">Name:</label>
                     <input type="text" class="form-control" class="name" placeholder="eg: John Smith" name="name"
                         required>
@@ -181,18 +219,24 @@
                     <label for="email" class="form-label">Email address:</label>
                     <input type="email" class="form-control" class="email" placeholder="name@example.com" name="email"
                         required>
-                </div>
-                <div class="form-text emailHelp">We'll never share your email with anyone else.</div>
+                </div> -->
+                <!-- <div class="form-text emailHelp">We'll never share your email with anyone else.</div> -->
 
                 <!-- Personal Details -->
 
-                <!-- Calendar -->
-                <div class="dateDiv">
+                <!-- Date and Time -->
+                <!-- <div class="dateDiv">
                     <label for="date">Date:</label>
 
-                    <input type="date" class="form-control" class="date" name="date" min="01-01-2022" max="31-12-2022">
-                </div>
-                <!-- Calendar -->
+                    <input type="date" class="form-control" class="date" name="date" min="01-01-2025" max="31-12-2025">
+
+                    <label for="time">Time:</label>
+
+                    <input type="time" class="form-control" class="time" name="date" min="07:00" max="23:00">
+
+
+                </div> -->
+                <!-- Date and Time -->
 
                 <!-- Number of People -->
                 <div class="dropdown mx-auto" id="people-container">
@@ -206,6 +250,7 @@
                         <p>Number of People</p>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item">1</a></li>
                         <li><a class="dropdown-item">2</a></li>
                         <li><a class="dropdown-item">3</a></li>
                         <li><a class="dropdown-item">4</a></li>
