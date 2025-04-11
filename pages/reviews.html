@@ -38,6 +38,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;800&display=swap" rel="stylesheet">
 
+    <!-- JavaScript Files -->
+    
 </head>
 
 <body>
@@ -114,184 +116,217 @@
 
     <hr class="hr-1">
 
-    <% for (r of reviews) {%>
-        <section class="customerReviews">
+    <section class="customerReviews">
 
-            <div class="name-date-div">
-                <span class="r-name">
-                    <%= r.name %>
-                </span> -
+        <div class="review-card">
+            <div class="review-details">
+                <span class="review-name">Jaq </span>
 
-                <span class="r-date" data-date="2022-05-16">
-                    <%= r.date %>
+                |
+
+                <span class="review-date">7 Apr, 2025</span>
+            </div>
+
+
+            <p class="review-text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Laboriosam cupiditate voluptatibus nobis ducimus omnis
+                impedit enim voluptas quisquam nulla neque id, eveniet
+                labore fugit commodi eligendi! Repellendus, tempora provident?
+            </p>
+
+            <div class="review-rating"></div>
+        </div>
+
+        <div class="review-card">
+            <div class="review-details">
+                <span class="review-name">Gerrard </span>
+
+                |
+
+                <span class="review-date">4 Apr, 2025</span>
+            </div>
+
+
+            <p class="review-text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Laboriosam cupiditate voluptatibus nobis ducimus omnis
+                impedit enim voluptas quisquam nulla neque id, eveniet
+                labore fugit commodi eligendi! Repellendus, tempora provident?
+            </p>
+
+            <div class="review-rating"></div>
+        </div>
+
+        <div class="review-card">
+            <div class="review-details">
+                <span class="review-name">Jamie </span>
+
+                |
+
+                <span class="review-date">28 Mar, 2025</span>
+            </div>
+
+
+            <p class="review-text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Laboriosam cupiditate voluptatibus nobis ducimus omnis
+                impedit enim voluptas quisquam nulla neque id, eveniet
+                labore fugit commodi eligendi! Repellendus, tempora provident?
+            </p>
+
+            <div class="review-rating"></div>
+        </div>
+
+    </section>
+
+
+
+
+
+    <div class="container reviews-container">
+
+        <h2 id="review-h1">What do you think of our service?</h2>
+
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum consequatur, dolore aut deserunt nemo sint
+            voluptatum in beatae, magni incidunt soluta delectus temporibus quisquam similique vero facilis atque
+            expedita voluptate?
+        </p>
+
+        <button class="review-btn btn">
+            Leave a Review
+        </button>
+
+        <form action="/reviews" method="POST" id="reviewsForm">
+            <div class="input-div">
+                <label for="name" class="form-label">Name:</label>
+                <input type="text" class="form-control" class="name" placeholder="eg: John Smith" name="name" required>
+            </div>
+
+            <div class="input-div">
+                <label for="email" class="form-label">Email address:</label>
+                <input type="email" class="form-control" class="email" placeholder="name@example.com" name="email"
+                    required>
+            </div>
+            <div class="form-text emailHelp">We'll never share your email with anyone else.</div>
+
+            <div class="dateDiv input-div">
+                <label for="date">Date:</label>
+
+                <input type="date" class="form-control" class="date" name="date" value="" min="01-01-2022"
+                    max="31-12-2022">
+            </div>
+
+            <span class="rating-label">
+                Rating:
+            </span>
+
+            <div class="rating">
+
+                <div class="stars">
+                    <input type="radio" name="rating" id="star5" value="5">
+                    <label for="star5" title="Excellent"></label>
+
+                    <input type="radio" name="rating" id="star4" value="4">
+                    <label for="star4" title="Very Good"></label>
+
+                    <input type="radio" name="rating" id="star3" value="3">
+                    <label for="star3" title="Satisfactory"></label>
+
+                    <input type="radio" name="rating" id="star2" value="2">
+                    <label for="star2" title="Not Satisfactory"></label>
+
+                    <input type="radio" name="rating" id="star1" value="1">
+                    <label for="star1" title="Awful"></label>
+                </div>
+            </div>
+
+
+
+            <div class="input-div">
+                <label for="review">Write Your Review:</label>
+                <textarea id="review" rows="10" cols="100" name="review" required></textarea>
+            </div>
+
+            <div class="reviewBtnDiv">
+                <button class="btn btn-secondary" id="reviewButton">Submit Review</button>
+            </div>
+        </form>
+
+    </div>
+
+
+
+
+    <footer>
+        <section>
+            <div class="footer-logo">
+                <h2>
+                    <i class="fas fa-utensils"></i> Restaurant Grill
+                </h2>
+                <span class="footer-slogan">
+                    Good food and vibes under one roof
                 </span>
             </div>
 
-            <div class="r-rating">
-                <%= r.rating %>/5
+            <div class="footer-address">
+                <h3>
+                    Main Address
+                </h3>
+
+                <p>
+                    25 City Street
+                </p>
+                <p>
+                    Morningside, Durban 4000
+                </p>
+
+
             </div>
 
-            <p class="r-review">
-                <%= r.review %>
-            </p>
+            <div class="footer-contacts">
+                <h3>Contact</h3>
 
+                <p>
+                    Phone: 031 --- ----
+                </p>
+                <p>
+                    Email: restaurantgrill@eatgood.com
+                </p>
+            </div>
         </section>
-        <% } %>
-
-            <div class="reviewBtnDiv">
-                <button id="showmore" class="btn btn-secondary">See More Reviews</button>
-            </div>
 
 
+        <hr class="hr-1">
 
-            <div class="container">
-                <div class="row">
+        <div id="footer-copyright">
+            <span class="copyright">
+                &copy; 2025 Restaurant Grill
+            </span>
 
-                    <h2 id="review-h1">What do you think of our service?</h2>
+            <span class="footer-socials">
+                <a href="#">
+                    <i class="fab fa-facebook"></i>
+                </a>
 
-                    <form action="/reviews" method="POST" id="reviewsForm">
-                        <div>
-                            <label for="name" class="form-label">Name:</label>
-                            <input type="text" class="form-control" class="name" placeholder="eg: John Smith"
-                                name="name" required>
-                        </div>
-
-                        <div>
-                            <label for="email" class="form-label">Email address:</label>
-                            <input type="email" class="form-control" class="email" placeholder="name@example.com"
-                                name="email" required>
-                        </div>
-                        <div class="form-text emailHelp">We'll never share your email with anyone else.</div>
-
-                        <div class="dateDiv">
-                            <label for="date">Date:</label>
-
-                            <input type="date" class="form-control" class="date" name="date" value="" min="01-01-2022"
-                                max="31-12-2022">
-                        </div>
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </span>
+        </div>
+    </footer>
 
 
-                        <div class="rating">
-                            <input type="radio" name="rating" id="star5" value="5">
-                            <label for="star5" title="Excellent"></label>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script>
 
-                            <input type="radio" name="rating" id="star4" value="4">
-                            <label for="star4" title="Very Good"></label>
-
-                            <input type="radio" name="rating" id="star3" value="3">
-                            <label for="star3" title="Satisfactory"></label>
-
-                            <input type="radio" name="rating" id="star2" value="2">
-                            <label for="star2" title="Not Satisfactory"></label>
-
-                            <input type="radio" name="rating" id="star1" value="1">
-                            <label for="star1" title="Awful"></label>
-                        </div>
-
-
-
-                        <div>
-                            <label for="review" class="form-label">Write Your Review:</label>
-                            <textarea class="form-control" id="review" rows="5" name="review" required></textarea>
-                        </div>
-
-                        <div class="reviewBtnDiv">
-                            <button class="btn btn-secondary" id="reviewButton">Submit Review</button>
-                        </div>
-                    </form>
-
-                </div>
-            </div>
-
-            <script src="/javascripts/reviews.js"></script>
-
-
-
-            <footer class="footer bg-dark py-3 mt-auto">
-
-
-                <section class="text-muted">
-
-                    <!-- Social Media and Contact Details -->
-                    <div class="container">
-
-                        <div class="row flex-row d-flex mb-3">
-
-                            <div class="p-2 col-sm-6 col-md-6 col-lg-6">
-                                <div class="col-sm-12 col-md-6 col-lg-4 col-auto me-md-auto">
-                                    <p class="footer-contacts">031 --- ----</p>
-                                </div>
-                            </div>
-
-                            <div class="p-2 col-sm-6 col-md-6 col-lg-6">
-                                <div class="col-sm-12 col-md-6 col-lg-4 col-auto ms-md-auto">
-                                    <p class="footer-contacts footer-right">restaurantgrill@outlook.com</p>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="row flex-row d-flex mb-3">
-
-                            <div class="p-2 col-sm-6 col-md-6 col-lg-6">
-                                <div class="col-sm-12 col-md-6 col-lg-4 col-auto me-md-auto">
-                                    <p class="footer-contacts">
-                                        <a href="#">
-                                            <i class="fab fa-instagram"></i> Restaurant_Grill
-                                        </a>
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="p-2 col-sm-6 col-md-6 col-lg-6">
-                                <div class="col-sm-12 col-md-6 col-lg-4 col-auto ms-md-auto">
-                                    <p class="footer-contacts footer-right">
-                                        <a href="#">
-                                            <i class="fab fa-facebook"></i> Restaurant Grill
-                                        </a>
-                                    </p>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <!-- Social Media and Contact Details -->
-
-
-                    <!-- Brand Logo -->
-                    <div class="d-flex flex-row mb-3">
-
-                        <div class="p-2 mx-auto">
-                            <a class="navbar-brand" href="/">
-                                <h2>
-                                    <i class="fas fa-utensils"></i> Restaurant Grill
-                                </h2>
-                            </a>
-                        </div>
-
-                    </div>
-                    <!-- Brand Logo -->
-                </section>
-
-                <hr class="hr-1">
-
-                <div class="container" id="copyright">
-                    <span class="text-muted">&copy; Restaurant Grill 2022</span>
-                </div>
-            </footer>
-
-
-            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-                integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-                crossorigin="anonymous"></script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-                integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-                crossorigin="anonymous"></script>
-            <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script>
-
-
+    <script src="../public/javascripts/reviews.js"></script>
 
 
 

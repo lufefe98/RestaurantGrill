@@ -1,25 +1,36 @@
-body{
+body {
     margin: 0;
     padding: 0;
     background: linen;
 }
 
 .rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin: auto;
     position: relative;
-    top: 5%;
-    left: 11.5%;
-    transform: translate(-50%, -50%) rotateY(180deg);
-    display: flex;
+    width: 100%;
+    transform: rotateY(180deg);
 }
+
 .rating input {
     display: none;
 }
+
 .rating label {
     display: block;
     cursor: pointer;
     width: 5%;
 }
+
+.rating-label {
+    margin-top: 25px;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+}
+
 .rating label:before {
     content: '\f005';
     font-family: fontAwesome;
@@ -28,6 +39,7 @@ body{
     font-size: 25px;
     color: rgb(0, 0, 0);
 }
+
 .rating label:after {
     content: '\f005';
     font-family: fontAwesome;
@@ -39,8 +51,9 @@ body{
     opacity: 0;
     transition: 0.5s;
 }
+
 .rating label:hover:after,
-.rating label:hover ~ label:after,
-.rating input:checked ~ label:after {
-   opacity: 1;
+.rating label:hover~label:after,
+.rating input:checked~label:after {
+    opacity: 1;
 }

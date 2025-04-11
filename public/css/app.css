@@ -52,7 +52,7 @@ hr.hr-1 {
 /* forms */
 label {
   font-family: 'Raleway', sans-serif;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 input[type="text"] {
@@ -339,10 +339,6 @@ label {
   margin: .4rem 0;
 }
 
-label {
-  font-weight: bold;
-}
-
 #table-head {
   text-align: center;
 }
@@ -463,16 +459,18 @@ span.form-text {
 
 /* REVIEWS */
 #reviewButton {
-  background-color: rgb(235, 227, 227);
+  background-color: rgb(26, 25, 25);
   border-color: rgb(26, 25, 25);
   font-family: 'Raleway', sans-serif;
 }
 
 #reviewButton:hover {
-  background-color: rgba(15, 15, 15, 0.582);
+  background-color: rgba(158, 143, 113, 0.582);
   border-color: rgba(150, 149, 147, 0.582);
   box-shadow: 0px 15px 20px rgba(29, 29, 29, 0.6);
-  transform: translateY(-7px);
+  transform: translateY(-.5px);
+  color: black;
+  font-weight: bolder;
 }
 
 #review-h1 {
@@ -494,29 +492,27 @@ span.form-text {
   margin: auto;
 }
 
+.reviews-container {
+  text-align: center;
+}
+
+.review-btn {
+  background-color: rgb(26, 25, 25);
+  border-color: rgb(26, 25, 25);
+  color: white;
+  font-family: 'Raleway', sans-serif;
+}
+
+.review-btn:hover {
+  background-color: rgba(158, 143, 113, 0.582);
+  border-color: rgba(150, 149, 147, 0.582);
+  box-shadow: 0px 15px 20px rgba(29, 29, 29, 0.6);
+  transform: translateY(-.5px);
+  color: black;
+  font-weight: bolder;
+}
+
 .name-date-div {
-  text-align: center;
-}
-
-.r-name {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 800;
-  text-align: center;
-}
-
-.r-date {
-  font-family: 'Raleway', sans-serif;
-  font-weight: lighter;
-  text-align: center;
-}
-
-.r-rating {
-  text-align: center;
-}
-
-.r-review {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 500;
   text-align: center;
 }
 
@@ -527,14 +523,43 @@ span.form-text {
 }
 
 .customerReviews {
+  display: flex;
+  justify-content: space-around;
   margin-top: 20px;
   margin-bottom: 20px;
+  padding: 25px;
   border-radius: 0.3rem;
+  background: rgba(211, 184, 199, 0.211);
 }
 
-.customerReviews:nth-child(even) {
-  background-color: rgba(228, 209, 209, 0.4);
-  border-radius: 0.3rem;
+.stars {
+  display: flex;
+  justify-content: space-evenly;
+  width: 33%;
+}
+
+.review-card {
+  height: 350px;
+  width: 20%;
+  padding: 10px;
+  border: 1px solid black;
+  background: linen;
+  text-align: center;
+  border-radius: 0.25rem;
+  box-shadow: 0px 15px 15px rgba(29, 29, 29, 0.6);
+}
+
+.review-name {
+  font-weight: 900;
+}
+
+.review-date {
+  font-weight: 900;
+}
+
+.review-text {
+  margin-top: 15px;
+  font-weight: 500;
 }
 
 

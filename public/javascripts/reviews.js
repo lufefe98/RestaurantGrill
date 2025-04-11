@@ -1,36 +1,24 @@
-// Show more reviews after the first 5 reviews
+// // Hide/Reveal Review Form
 
-const moreBtn = document.querySelector('#showmore');
+const reviewBtn = document.querySelector(".review-btn")
+const reviewForm = document.getElementById("reviewsForm")
 
-let currentIndex = 5;
-let countOfReviewsToShow = 5;
 
-moreBtn.addEventListener('click', () => {
-  const reviews = document.querySelectorAll('.customerReviews');
-  const hiddenReviews = [];
+reviewForm.style.display = 'none'
 
-//   Create a list of hiddenReviews
-  for(let i = 0; i < reviews.length; i++) {
-    if(reviews[i].style.display === 'none') {
-      hiddenReviews.push(reviews[i]);
-    }
+function toggleReviewFormDisplay() {
+  if (reviewForm.style.display === 'none') {
+    reviewForm.style.display = 'flex'
+    reviewBtn.innerText = 'Close Form'
+  } else if (reviewForm.display !== 'flex') {
+    reviewForm.style.display = 'none'
+    reviewBtn.innerText = 'Leave a Review'
   }
+}
 
-//   Toggle the display of 5 hidden reviews
-  for (let i = 0; i < Math.min(hiddenReviews.length, countOfReviewsToShow); i++) {
-      hiddenReviews[i].style.display = 'block';
-  }
-
-  currentIndex += 5;
-  
-//   If you display all the elements then hide the show more button
-  if (currentIndex >= reviews.length) {
-    moreBtn.style.display = 'none';
-  }
-})
+reviewBtn.addEventListener('click', toggleReviewFormDisplay)
 
 
-// Hide all reviews after the 5th review
-document.querySelectorAll('.customerReviews:nth-of-type(n+6)').forEach(item => {
-  item.style.display = 'none';
-})
+
+// Review Card Slider/Carousel
+
