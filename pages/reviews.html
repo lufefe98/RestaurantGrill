@@ -156,7 +156,9 @@
             </p>
 
             <div class="review-rating"></div>
-        </div>
+        </div> 
+
+
 
         <div class="review-card">
             <div class="review-details">
@@ -198,15 +200,15 @@
             Leave a Review
         </button>
 
-        <form action="/reviews" method="POST" id="reviewsForm">
+        <form method="POST" id="reviewsForm">
             <div class="input-div">
                 <label for="name" class="form-label">Name:</label>
-                <input type="text" class="form-control" class="name" placeholder="eg: John Smith" name="name" required>
+                <input type="text" class="form-control" id="name" placeholder="eg: John Smith" name="name" required>
             </div>
 
             <div class="input-div">
                 <label for="email" class="form-label">Email address:</label>
-                <input type="email" class="form-control" class="email" placeholder="name@example.com" name="email"
+                <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email"
                     required>
             </div>
             <div class="form-text emailHelp">We'll never share your email with anyone else.</div>
@@ -214,7 +216,7 @@
             <div class="dateDiv input-div">
                 <label for="date">Date:</label>
 
-                <input type="date" class="form-control" class="date" name="date" value="" min="01-01-2022"
+                <input type="date" class="form-control" id="date" name="date" value="" min="01-01-2022"
                     max="31-12-2022">
             </div>
 
@@ -225,19 +227,19 @@
             <div class="rating">
 
                 <div class="stars">
-                    <input type="radio" name="rating" id="star5" value="5">
+                    <input type="radio" class="star" name="rating" id="star5" value="5">
                     <label for="star5" title="Excellent"></label>
 
-                    <input type="radio" name="rating" id="star4" value="4">
+                    <input type="radio" class="star" name="rating" id="star4" value="4">
                     <label for="star4" title="Very Good"></label>
 
-                    <input type="radio" name="rating" id="star3" value="3">
+                    <input type="radio" class="star" name="rating" id="star3" value="3">
                     <label for="star3" title="Satisfactory"></label>
 
-                    <input type="radio" name="rating" id="star2" value="2">
+                    <input type="radio" class="star" name="rating" id="star2" value="2">
                     <label for="star2" title="Not Satisfactory"></label>
 
-                    <input type="radio" name="rating" id="star1" value="1">
+                    <input type="radio" class="star" name="rating" id="star1" value="1">
                     <label for="star1" title="Awful"></label>
                 </div>
             </div>

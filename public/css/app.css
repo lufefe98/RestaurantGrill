@@ -77,7 +77,7 @@ input[type="email"] {
   display: grid;
 }
 
-.date {
+#date {
   margin: auto;
   width: 25%;
 }
