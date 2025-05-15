@@ -525,6 +525,8 @@ span.form-text {
 .customerReviews {
   display: flex;
   justify-content: space-around;
+  /* align-items: center; */
+  /* height: 400px; */
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 25px;
@@ -539,8 +541,8 @@ span.form-text {
 }
 
 .review-card {
-  height: 350px;
-  width: 20%;
+  /* height: 80%;
+  width: 80% !important; */
   padding: 10px;
   border: 1px solid black;
   background: linen;
@@ -560,6 +562,41 @@ span.form-text {
 .review-text {
   margin-top: 15px;
   font-weight: 500;
+}
+
+/* swiper.js custom styles */
+
+.swiper {
+  padding-left: 50px !important;
+  padding-right: 50px !important;
+}
+
+.slider-wrapper {
+  overflow: hidden;
+}
+
+.slider-wrapper {
+  align-items: center !important;
+  background: whitesmoke;
+}
+
+.swiper-slide-button-next {
+  color: whitesmoke !important;
+}
+
+.swiper-slide .card-list {
+  height: 80%;
+  width: 80%;
+  margin-left: 20px;
+}
+
+.card-list .swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.swiper-pagination * {
+ background: rgb(65, 62, 62) !important;
 }
 
 
