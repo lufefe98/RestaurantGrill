@@ -29,27 +29,21 @@ const reviewEmail = document.getElementById("email")
 const reviewDate = document.getElementById("date")
 const reviewRating = document.querySelector(".star")
 const reviewText = document.getElementById("review")
-const reviewsSection = document.getElementsByClassName("customerReviews")
+const cardList = document.getElementsByClassName("card-list")
 
 
 
+// Event Listener
 
 reviewForm.addEventListener('submit', (e) => {
   e.preventDefault()
-  console.log(reviewName.value)
-  console.log(reviewEmail.value)
-  console.log(reviewDate.value)
-  console.log(reviewRating.value)
-  console.log(reviewText.value)
-
-
 
   // Create card elements
 
   const reviewCard = document.createElement('div')
-  reviewCard.classList.add('review-card')
+  reviewCard.classList.add('review-card', 'swiper-slide')
 
-  // comment details
+  // Create comment details
   const reviewCardDetails = document.createElement('div')
   reviewCardDetails.classList.add('review-details')
 
@@ -60,7 +54,7 @@ reviewForm.addEventListener('submit', (e) => {
   const reviewCardDate = document.createElement('span')
   reviewCardDate.classList.add('review-date')
   reviewCardDate.innerText = `${reviewDate.value}`
-  // comment details
+  // Create comment details
 
   const reviewCardText = document.createElement('p')
   reviewCardText.classList.add('review-text')
@@ -70,26 +64,15 @@ reviewForm.addEventListener('submit', (e) => {
 
   // Append card elements
 
-  reviewsSection[0].append(reviewCard)
+  cardList[0].append(reviewCard)
 
   reviewCard.append(reviewCardDetails, reviewCardText)
 
   reviewCardDetails.append(reviewCardName, ' | ', reviewCardDate)
 
-  // reviewsSection[0].appendChild(reviewCardText)
-
-
-
-
-  // console.log(reviewsSection)
-
-
 })
 
 
-
-
-
-
-// Review Card Slider/Carousel
-
+// Moving the creation of the card gives us the swiper.js
+// attributes and desired styling, but now, it requires
+// the text and other elements to be added to it.

@@ -525,8 +525,6 @@ span.form-text {
 .customerReviews {
   display: flex;
   justify-content: space-around;
-  /* align-items: center; */
-  /* height: 400px; */
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 25px;
@@ -541,8 +539,6 @@ span.form-text {
 }
 
 .review-card {
-  /* height: 80%;
-  width: 80% !important; */
   padding: 10px;
   border: 1px solid black;
   background: linen;
@@ -573,15 +569,6 @@ span.form-text {
 
 .slider-wrapper {
   overflow: hidden;
-}
-
-.slider-wrapper {
-  align-items: center !important;
-  background: whitesmoke;
-}
-
-.swiper-slide-button-next {
-  color: whitesmoke !important;
 }
 
 .swiper-slide .card-list {
