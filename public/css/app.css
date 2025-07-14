@@ -329,11 +329,6 @@ input[type="time"]:focus {
   filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.7))
 }
 
-[type=radio]:hover+img {
-  box-shadow: 0 0 40px rgba(233, 72, 51, 0.7);
-  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.7))
-}
-
 input,
 label {
   margin: .4rem 0;
@@ -438,6 +433,7 @@ span.form-text {
 .res-loc-img {
   width: 405px;
   height: 350px;
+  transition: filter 0.3s ease;
 }
 
 #res-check {
@@ -445,6 +441,10 @@ span.form-text {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+}
+
+.uncheckedRadio {
+  filter: grayscale(100%) blur(5px);
 }
 
 #flexCheckDefault {
