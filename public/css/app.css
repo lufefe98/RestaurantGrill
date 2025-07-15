@@ -175,6 +175,13 @@ input[type="email"] {
   margin-bottom: 20px;
 }
 
+.contact-card a {
+  color: black;
+}
+.contact-card a:hover {
+  color: rgb(54, 54, 202)
+}
+
 
 
 
