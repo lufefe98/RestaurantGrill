@@ -196,6 +196,12 @@ input[type="email"] {
   text-align: center;
 }
 
+.carousel-heading p {
+  font-family: 'Merriweather', serif;
+  font-size: medium;
+  font-weight: 500;
+}
+
 
 
 
