@@ -613,6 +613,23 @@ span.form-text {
   font-family: 'Merriweather', serif;
 }
 
+.about-h2 {
+  text-align: center;
+}
+
+.about-imgs {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  height: 300px;
+  width: 450px;
+}
+
+.about-imgs img {
+  height: 100%;
+  width: 100%;
+}
+
 
 
 
