@@ -39,7 +39,7 @@ reviewForm.addEventListener('submit', (e) => {
   const reviewName = document.getElementById("name")
   // const reviewEmail = document.getElementById("email")
   const reviewDate = document.getElementById("date")
-  // const reviewRating = document.querySelector(".star")
+  const reviewRatings = document.querySelectorAll(".star")
   const reviewText = document.getElementById("review")
   // const cardList = document.getElementsByClassName("card-list")
 
@@ -68,13 +68,23 @@ reviewForm.addEventListener('submit', (e) => {
   reviewCardText.textContent = `${reviewText.value.trim()}`
 
 
+
   // append elements
 
   reviewCard.append(reviewCardDetails, reviewCardText)
 
   reviewCardDetails.append(reviewCardName, separator, reviewCardDate)
 
-  
+    reviewRatings.forEach((reviewRating) => {
+    if (reviewRating.checked) {
+      // console.log(reviewRating.value)
+      const reviewCardReview = document.createElement('p')
+      reviewCardReview.classList.add('review-rating')
+      reviewCardReview.textContent = `Rating: ${reviewRating.value.trim()}/5`
+      reviewCard.append(reviewCardReview)
+    }
+  })
+
   // append to swiper
 
   swiper.appendSlide(reviewCard)
@@ -84,6 +94,7 @@ reviewForm.addEventListener('submit', (e) => {
 
   reviewForm.reset()
 
-  console.log(reviewCards)
-
 })
+
+
+

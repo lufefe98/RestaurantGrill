@@ -573,6 +573,10 @@ span.form-text {
   font-weight: 500;
 }
 
+.review-rating {
+  font-weight: bolder;
+}
+
 /* swiper.js custom styles */
 
 .swiper {
