@@ -114,34 +114,52 @@ input[type="email"] {
 
 
 /* HOME */
-.home-jumbos {
+.home-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
   margin-top: 50px;
   margin-bottom: 50px;
-  padding: 10px;
   border: 1px solid rgba(61, 61, 61, 0.5);
-  border-left: none;
-  border-right: none;
-}
-
-.home-jumbos:nth-child(even) {
-  background-color: rgba(228, 209, 209, 0.4);
-  border-radius: 0.3rem;
-}
-
-.home-jumbos:nth-child(odd) {
-  border-radius: 0.3rem;
-}
-
-.home-imgs {
+  border-left: 0px;
+  border-right: 0px;
   border-radius: 0.5rem;
-  height: 375px;
-  width: 450px;
-  justify-content: center;
+  padding: 0px;
+}
+
+.home-cards:nth-child(even) {
+  background-color: rgba(228, 209, 209, 0.4);
 }
 
 .home-imgs-div {
   display: flex;
-  justify-content: center;
+  height: 375px;
+  width: 100%;
+}
+
+.home-cards:nth-child(odd) .home-imgs-div {
+  justify-content: flex-end;
+  border-radius: 0rem 0.5rem 0.5rem 0rem;
+}
+
+.home-cards:nth-child(even) .home-imgs-div {
+  justify-content: flex-start;
+  border-radius: 0.5rem 0rem 0rem 0.5rem;
+}
+
+.home-cards:nth-child(odd) .home-imgs-div > .home-imgs {
+  border-radius: 0rem 0.5rem 0.5rem 0rem;
+}
+
+.home-cards:nth-child(even) .home-imgs-div > .home-imgs {
+  border-radius: 0.5rem 0rem 0rem 0.5rem;
+}
+
+.home-imgs {
+  border-radius: 0.5rem;
+  height: 100%;
+  width: 100%;
 }
 
 .home-h2 {
@@ -161,6 +179,7 @@ input[type="email"] {
 }
 
 .home-pars {
+  padding: 25px;
   text-align: center;
   font-family: 'Merriweather', serif;
 }
@@ -753,14 +772,6 @@ footer section {
   text-align: center;
   font-family: 'Raleway', sans-serif;
 }
-
-/* #logo {
-  text-align: right;
-}
-
-#phone {
-  padding-bottom: 5px;
-} */
 
 /* cards */
 
