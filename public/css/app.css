@@ -148,11 +148,11 @@ input[type="email"] {
   border-radius: 0.5rem 0rem 0rem 0.5rem;
 }
 
-.home-cards:nth-child(odd) .home-imgs-div > .home-imgs {
+.home-cards:nth-child(odd) .home-imgs-div>.home-imgs {
   border-radius: 0rem 0.5rem 0.5rem 0rem;
 }
 
-.home-cards:nth-child(even) .home-imgs-div > .home-imgs {
+.home-cards:nth-child(even) .home-imgs-div>.home-imgs {
   border-radius: 0.5rem 0rem 0rem 0.5rem;
 }
 
@@ -197,6 +197,7 @@ input[type="email"] {
 .contact-card a {
   color: black;
 }
+
 .contact-card a:hover {
   color: rgb(54, 54, 202)
 }
@@ -326,19 +327,19 @@ input[type="time"] {
   font-family: 'Raleway', sans-serif;
 }
 
-input[type="text"], 
-input[type="phone"], 
-input[type="email"], 
-input[type="date"], 
+input[type="text"],
+input[type="phone"],
+input[type="email"],
+input[type="date"],
 input[type="time"] {
   border-radius: 2px;
   padding: 8px;
 }
 
-input[type="text"]:focus, 
-input[type="phone"]:focus, 
-input[type="email"]:focus, 
-input[type="date"]:focus, 
+input[type="text"]:focus,
+input[type="phone"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
 input[type="time"]:focus {
   outline: none;
   border: 2px solid rgba(182, 69, 69, 0.27);
@@ -619,7 +620,7 @@ span.form-text {
 }
 
 .swiper-pagination * {
- background: rgb(65, 62, 62) !important;
+  background: rgb(65, 62, 62) !important;
 }
 
 
@@ -729,9 +730,12 @@ footer section {
   justify-content: space-around;
 }
 
-.footer-logo, .footer-address, .footer-contacts {
+.footer-logo,
+.footer-address,
+.footer-contacts {
   color: white;
 }
+
 .footer-slogan {
   font-size: small;
 }
@@ -777,7 +781,7 @@ footer section {
 
 .card {
   width: 30%;
-  height: 420px;
+  height: 450px;
   margin-top: 20px;
   margin-bottom: 20px;
   background-color: linen;
@@ -785,7 +789,25 @@ footer section {
   border: solid 1px rgb(136, 132, 132);
 }
 
+.card-img-div {
+  height: 50%;
+  width: 100%;
+}
+
+.card-imgs {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.25rem;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
 .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50%;
+  padding: 5px;
   border-bottom-left-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
 }
@@ -793,36 +815,33 @@ footer section {
 .card-text {
   display: flex;
   justify-content: center;
+  height: 66%;
   width: 100%;
   text-align: center;
   font-family: 'Merriweather', serif;
 }
 
 .card-button {
+  width: 80%;
   background-color: rgb(26, 25, 25);
   border-color: rgb(26, 25, 25);
   font-family: 'Raleway', sans-serif;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .menu-btn-div {
-  position: relative;
-  width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25%;
+  width: 100%;
 }
 
 .card-button:hover {
   background-color: rgba(15, 15, 15, 0.582);
   border-color: rgba(150, 149, 147, 0.582);
   box-shadow: 0px 15px 20px rgba(29, 29, 29, 0.6);
-}
-
-.card-imgs {
-  width: 100%;
-  height: 220px;
-  border-radius: 0.25rem;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
 }
 
 .card:hover {
