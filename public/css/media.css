@@ -111,6 +111,28 @@
   }
 
 
+  /* MENU */
+
+  .card-flex-row {
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  .card-flex-row .card {
+    width: 66%;
+  }
+
+    .card {
+    height: 450px;
+    padding-bottom: 25px;
+  }
+
+  .menu-container {
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
+
+
 
 
   /* CONTACTS */
@@ -158,6 +180,13 @@
 
   .home-cards {
     width: 80%;
+  }
+
+
+  /* MENU */
+
+    .card-flex-row .card {
+    width: 85%;
   }
 
 
