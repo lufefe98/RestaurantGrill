@@ -122,15 +122,15 @@
     width: 66%;
   }
 
-    .card {
+  .card {
     height: 450px;
     padding-bottom: 25px;
   }
 
-  .menu-container {
-  margin-top: 50px;
-  margin-bottom: 0px;
-}
+  .container {
+    margin-top: 50px;
+    margin-bottom: 0px;
+  }
 
 
 
@@ -174,7 +174,7 @@
 
   /* HOME */
 
-    .jumbotron h1 {
+  .jumbotron h1 {
     font-size: 18px;
   }
 
@@ -185,7 +185,7 @@
 
   /* MENU */
 
-    .card-flex-row .card {
+  .card-flex-row .card {
     width: 85%;
   }
 
