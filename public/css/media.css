@@ -99,7 +99,7 @@
     font-size: 25px;
   }
 
-  .reveal {
+  .home-cards {
     justify-self: center;
     width: 400px;
   }
@@ -211,6 +211,18 @@
 
 
   /* LOCATIONS */
+
+  .location-jumbos {
+    width: 100%;
+  }
+
+    .location-imgs-div {
+    width: 90%;
+  }
+
+  .map-card {
+    width: 90%;
+  }
 
 
   /* RESERVATIONS */
