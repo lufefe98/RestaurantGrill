@@ -234,8 +234,9 @@ input[type="email"] {
 /* LOCATIONS */
 .location-jumbos {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
-  height: 500px;
+  height: auto;
   margin-top: 50px;
   margin-bottom: 50px;
   padding: 10px;
@@ -249,11 +250,16 @@ input[type="email"] {
   background-color: rgba(228, 209, 209, 0.4);
 }
 
+.location-card-title {
+  margin-top: 20px;
+  text-align: center;
+}
+
 .location-card {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 40%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
   height: 90%;
   background: none;
   border: none;
@@ -261,40 +267,49 @@ input[type="email"] {
   margin-bottom: 20px;
 }
 
-.location-imgs {
-  width: 55%;
-  height: 175px;
+.location-imgs-div {
+  width: 48%;
+  height: 300px;
   border-radius: 0.25rem;
 }
 
-.location-card-body {
-  margin-top: 15px;
-  border: none;
-}
-
-.location-card-title {
-  margin-top: 20px;
-  text-align: center;
+.location-imgs-div img {
+  width: 100%;
+  height: 100%;
 }
 
 .map-card {
   margin-top: auto;
   margin-bottom: auto;
   padding: 0;
-  width: 45%;
-  height: 70%;
+  width: 48%;
+  height: 300px;
 }
 
 .map {
-  justify-content: center;
-  border-radius: 0.3rem;
+  border-radius: 0.5rem;
   width: 100%;
   height: 100%;
 }
 
-.location-head {
+.location-booking {
+  display: flex;
   justify-content: center;
+  height: 55px;
+  margin-top: 15px;
 }
+
+.location-booking button {
+  align-self: center;
+  height: 35px;
+  color: white;
+  background-color: rgb(26, 25, 25);
+  border-color: rgb(26, 25, 25);
+  font-family: 'Raleway', sans-serif;
+  border-radius: 0.5rem;
+}
+
+
 
 
 

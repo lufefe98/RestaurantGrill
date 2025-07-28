@@ -143,6 +143,19 @@
 
   /* LOCATIONS */
 
+  .location-card {
+    justify-content: center;
+  }
+
+  .location-imgs-div {
+    width: 80%;
+    margin-bottom: 25px;
+  }
+
+  .map-card {
+    width: 80%;
+  }
+
 
   /* RESERVATIONS */
 
