@@ -566,6 +566,10 @@ span.form-text {
   text-align: center;
 }
 
+.reviews-container p {
+  font-family: 'Merriweather', serif;
+}
+
 .review-btn {
   background-color: rgb(26, 25, 25);
   border-color: rgb(26, 25, 25);
