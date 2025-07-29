@@ -492,9 +492,15 @@ span.form-text {
   width: 50%;
 }
 
-.res-loc-img {
-  width: 405px;
+.res-loc-img-div {
+  width: 100%;
   height: 350px;
+  transition: filter 0.3s ease;
+}
+
+.res-loc-img {
+  width: 100%;
+  height: 100%;
   transition: filter 0.3s ease;
 }
 
