@@ -159,6 +159,10 @@
 
   /* RESERVATIONS */
 
+  .res-loc-img-div {
+    height: 250px;
+  }
+
 
   /* REVIEWS */
 
@@ -226,6 +230,10 @@
 
 
   /* RESERVATIONS */
+
+    .res-loc-img-div {
+    height: 200px;
+  }
 
 
   /* REVIEWS */
