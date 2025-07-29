@@ -2,7 +2,22 @@ const swiper = new Swiper('.swiper', {
 
   loop: true,
   grabCursor: true,
-  spaceBetween: 50,
+
+
+  // Swiper Breakpoints
+
+  breakpoints: {
+    280: {
+      slidesPerView: 1,
+      spaceBetween: 50
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+    }
+  },
+
+
 
   // If we need pagination
   pagination: {
@@ -75,7 +90,7 @@ reviewForm.addEventListener('submit', (e) => {
 
   reviewCardDetails.append(reviewCardName, separator, reviewCardDate)
 
-    reviewRatings.forEach((reviewRating) => {
+  reviewRatings.forEach((reviewRating) => {
     if (reviewRating.checked) {
       // console.log(reviewRating.value)
       const reviewCardReview = document.createElement('p')
