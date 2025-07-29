@@ -481,6 +481,7 @@ span.form-text {
 }
 
 .form-check-input {
+  display: block;
   align-content: center;
 }
 
@@ -506,9 +507,10 @@ span.form-text {
 
 #res-check {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .uncheckedRadio {

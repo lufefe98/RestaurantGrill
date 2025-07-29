@@ -228,7 +228,7 @@
     width: 100%;
   }
 
-    .location-imgs-div {
+  .location-imgs-div {
     width: 90%;
   }
 
@@ -236,10 +236,14 @@
     width: 90%;
   }
 
+  .form-check-label {
+    font-size: 13px;
+  }
+
 
   /* RESERVATIONS */
 
-    .res-loc-img-div {
+  .res-loc-img-div {
     height: 200px;
   }
 
