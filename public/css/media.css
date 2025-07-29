@@ -75,6 +75,10 @@
 
   /* REVIEWS */
 
+  textarea {
+    width: 100%;
+  }
+
 
   /* ABOUT US */
 
@@ -173,6 +177,10 @@
 
   /* REVIEWS */
 
+  .stars {
+    width: 50%;
+  }
+
 
   /* ABOUT US */
 
@@ -248,6 +256,10 @@
 
 
   /* REVIEWS */
+
+  .stars {
+    width: 66%;
+  }
 
 
   /* ABOUT US */

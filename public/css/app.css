@@ -72,12 +72,13 @@ input[type="email"] {
 }
 
 .dateDiv {
+  width: 50%;
   display: grid;
 }
 
 #date {
   margin: auto;
-  width: 25%;
+  width: 100%;
 }
 
 /* divs */
@@ -576,6 +577,11 @@ span.form-text {
   color: white;
   font-family: 'Raleway', sans-serif;
 }
+
+  .textarea-input-div {
+    width: 90%;
+  }
+
 
 .review-btn:hover {
   background-color: rgba(158, 143, 113, 0.582);
