@@ -44,72 +44,98 @@ const reviewForm = document.getElementById("reviewsForm")
 
 const reviewCards = document.getElementsByClassName('review-card')
 
-// Event Listener
 
-reviewForm.addEventListener('submit', (e) => {
-  e.preventDefault()
+// Load user submitted reviews 
+
+window.addEventListener("DOMContentLoaded", () => {
+  const savedReviews = JSON.parse(localStorage.getItem("reviews")) || [];
+  savedReviews.forEach((review) => renderReviewCard(review));
+});
+
+// Submit Event Listener
+
+
+
+reviewForm.addEventListener("submit", (e) => {
+  e.preventDefault();
 
   // input fields
+  const reviewName = document.getElementById("name");
+  const reviewDate = document.getElementById("date");
+  const reviewRatings = document.querySelectorAll(".star");
+  const reviewText = document.getElementById("review");
 
-  const reviewName = document.getElementById("name")
-  // const reviewEmail = document.getElementById("email")
-  const reviewDate = document.getElementById("date")
-  const reviewRatings = document.querySelectorAll(".star")
-  const reviewText = document.getElementById("review")
-  // const cardList = document.getElementsByClassName("card-list")
+  // form validation
+  if (
+    !reviewName.value.trim() ||
+    !reviewDate.value.trim() ||
+    !reviewText.value.trim()
+  ) {
+    alert("Please fill out all fields.");
+    return;
+  }
 
-
-
-  // create card
-
-  const reviewCard = document.createElement('div')
-  reviewCard.classList.add('review-card', 'swiper-slide')
-
-  const reviewCardDetails = document.createElement('div')
-  reviewCardDetails.classList.add('review-details')
-
-  const reviewCardName = document.createElement('span')
-  reviewCardName.classList.add('review-name')
-  reviewCardName.textContent = `${reviewName.value.trim()}`
-
-  const separator = document.createTextNode(' | ');
-
-  const reviewCardDate = document.createElement('span')
-  reviewCardDate.classList.add('review-date')
-  reviewCardDate.textContent = `${reviewDate.value.trim()}`
-
-  const reviewCardText = document.createElement('p')
-  reviewCardText.classList.add('review-text')
-  reviewCardText.textContent = `${reviewText.value.trim()}`
-
-
-
-  // append elements
-
-  reviewCard.append(reviewCardDetails, reviewCardText)
-
-  reviewCardDetails.append(reviewCardName, separator, reviewCardDate)
-
-  reviewRatings.forEach((reviewRating) => {
-    if (reviewRating.checked) {
-      // console.log(reviewRating.value)
-      const reviewCardReview = document.createElement('p')
-      reviewCardReview.classList.add('review-rating')
-      reviewCardReview.textContent = `Rating: ${reviewRating.value.trim()}/5`
-      reviewCard.append(reviewCardReview)
+  let selectedRating = null;
+  reviewRatings.forEach((star) => {
+    if (star.checked) {
+      selectedRating = star.value;
     }
-  })
+  });
 
-  // append to swiper
+  if (!selectedRating) {
+    alert("Please select a rating.");
+    return;
+  }
 
-  swiper.appendSlide(reviewCard)
+  // Create review object
+  const newReview = {
+    name: reviewName.value.trim(),
+    date: reviewDate.value.trim(),
+    rating: selectedRating,
+    text: reviewText.value.trim(),
+  };
+
+  // Save to localStorage
+  const savedReviews = JSON.parse(localStorage.getItem("reviews")) || [];
+  savedReviews.push(newReview);
+  localStorage.setItem("reviews", JSON.stringify(savedReviews));
+
+  // Render the new review card
+  renderReviewCard(newReview);
+
+  // Reset form
+  reviewForm.reset();
+});
 
 
-  // reset form
 
-  reviewForm.reset()
+function renderReviewCard(review) {
+  const reviewCard = document.createElement("div");
+  reviewCard.classList.add("review-card", "swiper-slide");
 
-})
+  const reviewCardDetails = document.createElement("div");
+  reviewCardDetails.classList.add("review-details");
 
+  const reviewCardName = document.createElement("span");
+  reviewCardName.classList.add("review-name");
+  reviewCardName.textContent = review.name;
 
+  const separator = document.createTextNode(" | ");
 
+  const reviewCardDate = document.createElement("span");
+  reviewCardDate.classList.add("review-date");
+  reviewCardDate.textContent = review.date;
+
+  const reviewCardText = document.createElement("p");
+  reviewCardText.classList.add("review-text");
+  reviewCardText.textContent = review.text;
+
+  const reviewCardRating = document.createElement("p");
+  reviewCardRating.classList.add("review-rating");
+  reviewCardRating.textContent = `Rating: ${review.rating}/5`;
+
+  reviewCardDetails.append(reviewCardName, separator, reviewCardDate);
+  reviewCard.append(reviewCardDetails, reviewCardText, reviewCardRating);
+
+  swiper.appendSlide(reviewCard);
+}
