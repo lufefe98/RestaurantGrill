@@ -87,6 +87,11 @@ reviewForm.addEventListener("submit", (e) => {
     return;
   }
 
+  if (!reviewText.value.trim().length > 330) {
+    alert("Please limit your review to 330 characters or less")
+    return
+  }
+
   // Create review object
   const newReview = {
     name: reviewName.value.trim(),
@@ -124,7 +129,13 @@ function renderReviewCard(review) {
 
   const reviewCardDate = document.createElement("span");
   reviewCardDate.classList.add("review-date");
-  reviewCardDate.textContent = review.date;
+  const formattedDate = new Date(review.date).toLocaleDateString("en-GB", {
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+});
+reviewCardDate.textContent = formattedDate;
+
 
   const reviewCardText = document.createElement("p");
   reviewCardText.classList.add("review-text");
