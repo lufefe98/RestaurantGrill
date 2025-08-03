@@ -131,7 +131,7 @@ function renderReviewCard(review) {
   reviewCardDate.classList.add("review-date");
   const formattedDate = new Date(review.date).toLocaleDateString("en-GB", {
   day: "numeric",
-  month: "long",
+  month: "short",
   year: "numeric",
 });
 reviewCardDate.textContent = formattedDate;
