@@ -38,6 +38,13 @@ Open any of the HTML files on your browser to view website locally.
 Pull requests are welcome. For major changes, please open an issue first to discuss your proposed changes.
 
 
+## 📈 Future Improvements
+* Implement edit and delete feature for reviews
+* Backend to permantly store reviews and allow users to get emails after submitting reservations
+* Display review ratings with stars
+* Increasee review count for reviews from 330 characters to 1000 and have a 'show more button' to show longer reviews on a modal
+* Better styles for form inputs and input pop-ups
+* (Possibly) Migrate the website to React.js
 
 
 
