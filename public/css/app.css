@@ -343,6 +343,8 @@ input[type="date"] {
   border: none;
   font-weight: 500;
   color: #6c757d;
+  color-scheme: dark;
+  background-color: white;
   border-radius: 5px;
   font-family: 'Raleway', sans-serif;
 }
@@ -352,6 +354,8 @@ input[type="time"] {
   text-align: center;
   font-weight: 500;
   color: #6c757d;
+  color-scheme: dark;
+  background-color: white;
   border-radius: 5px;
   font-family: 'Raleway', sans-serif;
 }
@@ -485,6 +489,10 @@ span.form-text {
   align-content: center;
 }
 
+.form-check-label {
+  width: 100%
+}
+
 .dropdown-toggle {
   font-family: 'Raleway', sans-serif;
 }
@@ -578,9 +586,9 @@ span.form-text {
   font-family: 'Raleway', sans-serif;
 }
 
-  .textarea-input-div {
-    width: 90%;
-  }
+.textarea-input-div {
+  width: 90%;
+}
 
 
 .review-btn:hover {
