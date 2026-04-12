@@ -358,9 +358,9 @@
 
 
 
-    <div class="container reviews-container">
+    <!-- <div class="container reviews-container">
 
-        <h2 id="review-h1">What do you think of our service?</h2>
+        <h2 id="review-h2">What do you think of our service?</h2>
 
         <p>
             Have you been to one of our fine setablishments recently?
@@ -428,6 +428,52 @@
                 <button class="btn btn-secondary" id="reviewButton">Submit Review</button>
             </div>
         </form>
+
+    </div> -->
+
+
+    <div class="container edit-reviews-container">
+        <h2 id="edit-reviews-h2">Edit Review</h2>
+
+        
+        <form method="POST" id="editReviewsForm">
+
+            <span class="rating-label">
+                Rating:
+            </span>
+
+            <div class="rating">
+
+                <div class="stars">
+                    <input type="radio" class="star" name="rating" id="star5" value="5">
+                    <label for="star5" title="Excellent"></label>
+
+                    <input type="radio" class="star" name="rating" id="star4" value="4">
+                    <label for="star4" title="Very Good"></label>
+
+                    <input type="radio" class="star" name="rating" id="star3" value="3">
+                    <label for="star3" title="Satisfactory"></label>
+
+                    <input type="radio" class="star" name="rating" id="star2" value="2">
+                    <label for="star2" title="Not Satisfactory"></label>
+
+                    <input type="radio" class="star" name="rating" id="star1" value="1">
+                    <label for="star1" title="Awful"></label>
+                </div>
+            </div>
+
+
+
+            <div class="input-div textarea-input-div">
+                <label for="review">Write Your Review:</label>
+                <textarea id="review" rows="10" cols="100" name="review" maxlength="330" required></textarea>
+            </div>
+
+            <div class="reviewBtnDiv">
+                <button class="btn btn-secondary" id="reviewButton">Submit Review</button>
+            </div>
+        </form>
+
 
     </div>
 
