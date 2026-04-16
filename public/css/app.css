@@ -639,7 +639,10 @@ span.form-text {
   display: inline;
 }
 
-.review-options {
+.review-options-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
   outline: none;
   border: none;
   background: none;
@@ -650,10 +653,28 @@ span.form-text {
 }
 
 .review-options-dropdown {
-  display: none;
-  background: none;
-  border: none;
+  position: absolute;
+  right: 10px;
+  top: 40px;
 }
+
+.review-dropdown-item {
+  /* display: flex; */
+  display: none;
+  flex-direction: column;
+  height: 40px;
+  width: 65px;
+  padding: 10px;
+  margin: 0px;
+  background: white;
+  color: black;
+}
+
+.review-dropdown-item:hover {
+  color: white;
+  background: black;
+}
+
 
 .review-name {
   font-weight: 900;
@@ -672,7 +693,7 @@ span.form-text {
   font-weight: bolder;
 }
 
-.editReviewsForm {
+.edit-reviews-container {
   display: none;
 }
 
