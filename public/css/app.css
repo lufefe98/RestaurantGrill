@@ -552,7 +552,8 @@ span.form-text {
   font-weight: bolder;
 }
 
-#review-h2, #edit-reviews-h2 {
+#review-h2,
+#edit-reviews-h2 {
   text-align: center;
 }
 
