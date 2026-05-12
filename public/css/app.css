@@ -655,14 +655,18 @@ span.form-text {
 
 .review-options-dropdown {
   position: absolute;
+  display: none;
+  flex-direction: column;
   right: 10px;
   top: 40px;
 }
 
+.active-dropdown {
+  display: flex;
+}
+
 .review-dropdown-item {
-  /* display: flex; */
-  display: none;
-  flex-direction: column;
+  display: flex;
   height: 40px;
   width: 65px;
   padding: 10px;

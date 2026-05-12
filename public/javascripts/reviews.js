@@ -3,8 +3,7 @@
 const reviewBtn = document.querySelector(".review-btn")
 const form = document.getElementById("reviewsForm")
 
-const reviewsOptionBtn = document.querySelectorAll(".review-options-btn")
-const reviewsOptionDropdown = document.querySelectorAll(".review-options-dropdown")
+const reviewsOptionBtn = document.querySelector(".review-options-btn")
 const editFormSection = document.getElementById("edit-reviews-container")
 const reviewCard = document.querySelectorAll(".review-card")
 
@@ -33,27 +32,45 @@ reviewBtn.addEventListener('click', toggleformDisplay)
 reviewCard.forEach(card => {
   // Inputs: card, button, list of (hidden) dropdown options
   const reviewOptionsBtn = card.querySelector('.review-options-btn')
-  const reviewDropdownItem = card.querySelectorAll('.review-dropdown-item')
+  const reviewsOptionDropdown = card.querySelector(".review-options-dropdown")
 
 
   // Outputs: Visible dropdown options
-  reviewOptionsBtn.addEventListener('click', () => {
-    for (let i = 0; i < reviewDropdownItem.length; i++) {
-      if (reviewDropdownItem[i].style.display === '') {
-        reviewDropdownItem[i].style.display = 'flex'
-        console.log(`${reviewDropdownItem[i].style.display}`)
-      } else if (reviewDropdownItem[i].style.display === 'flex'){
-        reviewDropdownItem[i].style.display = 'none'
-        console.log(`${reviewDropdownItem[i].style.display}`)
-      } else {
-        reviewDropdownItem[i].style.display = 'flex'
-        console.log(`${reviewDropdownItem[i].style.display}`)
-      }
-    }
+  reviewOptionsBtn.addEventListener('click', (event) => {
+
+    // Toggle active class for dropdowns
+    reviewsOptionDropdown.classList.toggle('active-dropdown')
+
+    // Monitor active and non-active cards
+
+    if (reviewOptionsBtn.matches(':focus') && !reviewOptionsBtn.nextElementSibling.classList.contains('active')) {
+      console.log("This button is currently active/focused.");
+    } 
+    // if (!reviewOptionsBtn.matches(':focus') && !reviewOptionsBtn.nextElementSibling.classList.contains('active')) {
+    //   console.log("This button is not active/focused.");
+    // }
+
+    
+    // if (document.activeElement !== reviewOptionsBtn && reviewOptionsBtn.nextElementSibling.classList.contains('active')) {
+    //   reviewsOptionDropdown.classList.remove('active')
+    // }
   })
-  // Edge cases: All the other dropdown menus could be
-  // activated, the dropdown menu has to go away if I click
-  // anywhere else, only one dropdown can be active at a time.
+
+
+
+
+
+
+
+
+  // Edge cases: 
+  // All the other dropdown menus could be
+  // activated. - sorted
+  // The dropdown menu has to go away if I click
+  // the button that opened it. - sorted
+  // Only one dropdown can be active at a time.
+  // The dropdown menu has to go away if I click
+  // anywhere else.
 
 
 });
@@ -68,13 +85,3 @@ reviewCard.forEach(card => {
 
 
 
-// Ignore this:
-
-// const nkinobho = document.querySelectorAll(".review-options-btn")
-// nkinobho[0].addEventListener('click', () => {
-//     const reviewOptions = document.querySelectorAll('.review-dropdown-item')
-
-//     for (let i = 0; i < reviewOptions.length; i++) {
-//      reviewOptions[i].style.display = 'flex'
-//     }
-// })
