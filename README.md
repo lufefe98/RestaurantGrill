@@ -15,7 +15,7 @@ It has a responsove layout that is created with CSS flexbox and navbar created w
 * 📝 Reviews page that lets users submit and view reviews that are displayed on a Swiper.js carousel
 * 📅 Reservation page with a form for booking
 * 📞 Contact form for customer inquiries
-* ℹ️ About Us page with restaurant background
+* ℹ️ About Us page with restaurant background story
 * 📱 Responsive navbar and dropdown menu using Bootstrap
 
 ## 🔨 Tech Stack 
