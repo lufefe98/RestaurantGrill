@@ -1,7 +1,7 @@
 # Restaurant Grill Webstite
 
 ## 📃 Description
-This is a responsive website multi-page website that is created with HTML, CSS, JavaScript, Bootstrap and Swiper.js.
+This is a responsive, multi-page website that is created with HTML, CSS, JavaScript, Bootstrap and Swiper.js.
 It allows users to view menus, explore a gallery of images, get information on how to contact the restaurant and where find the restaurant. It has an about page for users to learn
 about the backstory of this fictional restaurant.
 There is also a review page which allows users to add reviews to the page, where the reviews are saved to localStorage and displayed on a carousel that is created using Swiper.js.
