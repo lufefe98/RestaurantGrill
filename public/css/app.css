@@ -537,10 +537,53 @@ span.form-text {
 
 /* REVIEWS */
 
+.reviewBtnDiv {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 15px;
+  width: 75%;
+  padding-right: 0px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#empty-reviews {
+  font-weight: bolder;
+}
+
 #reviewButton {
-  background-color: rgb(26, 25, 25);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  height: 35px;
+  background-color: rgb(25, 26, 25);
   border-color: rgb(26, 25, 25);
   font-family: 'Raleway', sans-serif;
+}
+
+#reviewEditButton {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  height: 35px;
+  background-color: rgb(25, 26, 25);
+  border-color: rgb(26, 25, 25);
+  font-family: 'Raleway', sans-serif;
+}
+
+#cancel-edit-btn {
+  height: 35px;
+  width: 100px;
+  background-color: rgb(217, 82, 82);
+  border: 0.15px solid black;
+  font-family: 'Raleway', sans-serif;
+}
+
+#cancel-edit-btn:hover {
+  border-color: rgba(39, 38, 38, 0.582);
+  box-shadow: 0px 15px 20px rgba(29, 29, 29, 0.6);
+  transform: translateY(-.5px);
+  color: black;
+  font-weight: bolder;
 }
 
 #reviewButton:hover {
@@ -562,21 +605,15 @@ span.form-text {
   margin-bottom: 20px;
 }
 
-#reviewButton {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin: auto;
-}
-
 #showmore {
   margin: auto;
 }
 
-.reviews-container {
+#reviews-container {
   text-align: center;
 }
 
-.reviews-container p {
+#reviews-container p {
   font-family: 'Merriweather', serif;
 }
 
@@ -588,7 +625,8 @@ span.form-text {
 }
 
 .textarea-input-div {
-  width: 90%;
+  width: 75%;
+  padding: 0px;
 }
 
 
@@ -603,12 +641,6 @@ span.form-text {
 
 .name-date-div {
   text-align: center;
-}
-
-.reviewBtnDiv {
-  display: grid;
-  margin-top: 15px;
-  margin-bottom: 15px;
 }
 
 .customerReviews {
@@ -655,14 +687,17 @@ span.form-text {
 
 .review-options-dropdown {
   position: absolute;
-  display: none;
   flex-direction: column;
   right: 10px;
   top: 40px;
 }
 
-.active-dropdown {
+.is-open {
   display: flex;
+}
+
+.hide-dropdown {
+  display: none;
 }
 
 .review-dropdown-item {
@@ -692,6 +727,7 @@ span.form-text {
 .review-text {
   margin-top: 15px;
   font-weight: 500;
+  word-wrap: break-word;
 }
 
 .review-rating {
@@ -701,6 +737,70 @@ span.form-text {
 .edit-reviews-container {
   display: none;
 }
+
+.active-review-form {
+  display: block;
+}
+
+.inactive-review-form {
+  display: none;
+}
+
+#edit-review-text {
+  width: 100%;
+}
+
+dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.show-modal {
+  display: block;
+}
+
+.modal-content {
+  padding: 20px;
+  background: rgb(46, 46, 46);
+  color: antiquewhite;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+}
+
+.delete-bold {
+  font-weight: bold;
+}
+
+#closeModalBtn {
+  margin: 10px;
+  background: whitesmoke;
+  color: black;
+}
+
+#closeModalBtn:hover {
+  font-weight: 700;
+  box-shadow: 0px 5px 5px rgba(167, 166, 166, 0.6);
+}
+
+#deleteBtn {
+  margin: 10px;
+  background: red;
+  color: black;
+}
+
+#deleteBtn:hover {
+  font-weight: 700;
+  box-shadow: 0px 5px 5px rgba(246, 130, 130, 0.6);
+}
+
+
 
 /* swiper.js custom styles */
 

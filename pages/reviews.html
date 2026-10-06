@@ -45,6 +45,20 @@
 </head>
 
 <body>
+    <dialog id="myModal">
+        <div class="modal-content">
+            <p>Are you sure you want to <span class="delete-bold">delete</span> your review?</p>
+
+            <div class="modal-btns">
+                <button class="btn btn-secondary" id="closeModalBtn">Cancel</button>
+                <button class="btn btn-secondary" id="deleteBtn">Delete</button>
+            </div>
+
+        </div>
+
+    </dialog>
+
+
     <nav class="navbar navbar-light">
         <div class="container-fluid">
 
@@ -122,232 +136,6 @@
         <!-- <swiper wrapper -->
         <div class="card-list swiper-wrapper" style="display: flex; align-items: center;">
 
-            <!-- List of cards -->
-            <div class="review-card swiper-slide">
-                <div class="review-details">
-                    <span class="review-name">Jaq </span>
-
-                    |
-
-                    <span class="review-date">7 Apr, 2025</span>
-                </div>
-
-                <div class="review-options">
-                    <button class="review-options-btn">
-                        &vellip;
-                    </button>
-
-                    <div class="review-options-dropdown">
-                        <a href="" class="review-dropdown-item" value="edit">Edit</a>
-                        <a href="" class="review-dropdown-item" value="delete">Delete</a>
-                    </div>
-                </div>
-
-
-
-
-                <p class="review-text">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Laboriosam cupiditate voluptatibus nobis ducimus omnis
-                    impedit enim voluptas quisquam nulla neque id, eveniet
-                    labore fugit commodi eligendi! Repellendus, tempora provident?
-                </p>
-
-                <p class="review-rating">Rating: 4/5</p>
-            </div>
-
-            <div class="review-card swiper-slide">
-                <div class="review-details">
-                    <span class="review-name">Gerrard </span>
-
-                    |
-
-                    <span class="review-date">4 Apr, 2025</span>
-                </div>
-
-                <div class="review-options">
-                    <button class="review-options-btn">
-                        &vellip;
-                    </button>
-
-                    <div class="review-options-dropdown">
-                        <a href="" class="review-dropdown-item" value="edit">Edit</a>
-                        <a href="" class="review-dropdown-item" value="delete">Delete</a>
-                    </div>
-                </div>
-
-
-                <p class="review-text">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Laboriosam cupiditate voluptatibus nobis ducimus omnis
-                    impedit enim voluptas quisquam nulla neque id, eveniet
-                    labore fugit commodi eligendi! Repellendus, tempora provident?
-                </p>
-
-                <p class="review-rating">Rating: 5/5</p>
-            </div>
-
-
-
-            <div class="review-card swiper-slide">
-                <div class="review-details">
-                    <span class="review-name">Jamie </span>
-
-                    |
-
-                    <span class="review-date">28 Mar 2025</span>
-                </div>
-
-                <div class="review-options">
-                    <button class="review-options-btn">
-                        &vellip;
-                    </button>
-
-                    <div class="review-options-dropdown">
-                        <a href="" class="review-dropdown-item" value="edit">Edit</a>
-                        <a href="" class="review-dropdown-item" value="delete">Delete</a>
-                    </div>
-                </div>
-
-
-                <p class="review-text">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Laboriosam cupiditate voluptatibus nobis ducimus omnis
-                    impedit enim voluptas quisquam nulla neque id, eveniet
-                    labore fugit commodi eligendi! Repellendus, tempora provident?
-                </p>
-
-                <p class="review-rating">Rating: 3/5</p>
-            </div>
-
-
-            <div class="review-card swiper-slide">
-                <div class="review-details">
-                    <span class="review-name">Cody </span>
-
-                    |
-
-                    <span class="review-date">28 Mar 2025</span>
-                </div>
-
-                <div class="review-options">
-                    <button class="review-options-btn">
-                        &vellip;
-                    </button>
-
-                    <div class="review-options-dropdown">
-                        <a href="" class="review-dropdown-item" value="edit">Edit</a>
-                        <a href="" class="review-dropdown-item" value="delete">Delete</a>
-                    </div>
-                </div>
-
-
-                <p class="review-text">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Laboriosam cupiditate voluptatibus nobis ducimus omnis
-                    impedit enim voluptas quisquam nulla neque id, eveniet
-                    labore fugit commodi eligendi! Repellendus, tempora provident?
-                </p>
-
-                <p class="review-rating">Rating: 4/5</p>
-            </div>
-
-
-            <div class="review-card swiper-slide">
-                <div class="review-details">
-                    <span class="review-name">Sam </span>
-
-                    |
-
-                    <span class="review-date">28 Mar 2025</span>
-                </div>
-
-                <div class="review-options">
-                    <button class="review-options-btn">
-                        &vellip;
-                    </button>
-
-                    <div class="review-options-dropdown">
-                        <a href="" class="review-dropdown-item" value="edit">Edit</a>
-                        <a href="" class="review-dropdown-item" value="delete">Delete</a>
-                    </div>
-                </div>
-
-
-                <p class="review-text">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Laboriosam cupiditate voluptatibus nobis ducimus omnis
-                    impedit enim voluptas quisquam nulla neque id, eveniet
-                    labore fugit commodi eligendi! Repellendus, tempora provident?
-                </p>
-
-                <p class="review-rating">Rating: 3/5</p>
-            </div>
-
-
-            <div class="review-card swiper-slide">
-                <div class="review-details">
-                    <span class="review-name">Leo </span>
-
-                    |
-
-                    <span class="review-date">28 Mar 2025</span>
-                </div>
-
-                <div class="review-options">
-                    <button class="review-options-btn">
-                        &vellip;
-                    </button>
-
-                    <div class="review-options-dropdown">
-                        <a href="" class="review-dropdown-item" value="edit">Edit</a>
-                        <a href="" class="review-dropdown-item" value="delete">Delete</a>
-                    </div>
-                </div>
-
-
-                <p class="review-text">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Laboriosam cupiditate voluptatibus nobis ducimus omnis
-                    impedit enim voluptas quisquam nulla neque id, eveniet
-                    labore fugit commodi eligendi! Repellendus, tempora provident?
-                </p>
-
-                <p class="review-rating">Rating: 3/5</p>
-            </div>
-
-
-            <div class="review-card swiper-slide">
-                <div class="review-details">
-                    <span class="review-name">Joe </span>
-
-                    |
-
-                    <span class="review-date">28 Mar 2025</span>
-                </div>
-
-                <div class="review-options">
-                    <button class="review-options-btn">
-                        &vellip;
-                    </button>
-
-                    <div class="review-options-dropdown">
-                        <a href="" class="review-dropdown-item" value="edit">Edit</a>
-                        <a href="" class="review-dropdown-item" value="delete">Delete</a>
-                    </div>
-                </div>
-
-
-                <p class="review-text">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Laboriosam cupiditate voluptatibus nobis ducimus omnis
-                    impedit enim voluptas quisquam nulla neque id, eveniet
-                    labore fugit commodi eligendi! Repellendus, tempora provident?
-                </p>
-
-                <p class="review-rating">Rating: 5/5</p>
-            </div>
-            <!-- List of cards -->
 
         </div>
         <!-- swiper wrapper -->
@@ -372,7 +160,7 @@
 
 
 
-    <div class="container reviews-container">
+    <div class="container" id="reviews-container">
 
         <h2 id="review-h2">What do you think of our service?</h2>
 
@@ -446,7 +234,7 @@
     </div>
 
 
-    <div class="container edit-reviews-container">
+    <div class="container edit-reviews-container" id="edit-reviews-container">
         <h2 id="edit-reviews-h2">Edit Review</h2>
 
 
@@ -459,20 +247,20 @@
             <div class="rating">
 
                 <div class="stars">
-                    <input type="radio" class="star" name="rating" id="star5" value="5">
-                    <label for="star5" title="Excellent"></label>
+                    <input type="radio" class="editStar" name="editRating" id="editStar5" value="5">
+                    <label for="editStar5" title="Excellent"></label>
 
-                    <input type="radio" class="star" name="rating" id="star4" value="4">
-                    <label for="star4" title="Very Good"></label>
+                    <input type="radio" class="editStar" name="editRating" id="editStar4" value="4">
+                    <label for="editStar4" title="Very Good"></label>
 
-                    <input type="radio" class="star" name="rating" id="star3" value="3">
-                    <label for="star3" title="Satisfactory"></label>
+                    <input type="radio" class="editStar" name="editRating" id="editStar3" value="3">
+                    <label for="editStar3" title="Satisfactory"></label>
 
-                    <input type="radio" class="star" name="rating" id="star2" value="2">
-                    <label for="star2" title="Not Satisfactory"></label>
+                    <input type="radio" class="editStar" name="editRating" id="editStar2" value="2">
+                    <label for="editStar2" title="Not Satisfactory"></label>
 
-                    <input type="radio" class="star" name="rating" id="star1" value="1">
-                    <label for="star1" title="Awful"></label>
+                    <input type="radio" class="editStar" name="editRating" id="editStar1" value="1">
+                    <label for="editStar1" title="Awful"></label>
                 </div>
             </div>
 
@@ -480,11 +268,13 @@
 
             <div class="input-div textarea-input-div">
                 <label for="review">Write Your Review:</label>
-                <textarea id="review" rows="10" cols="100" name="review" maxlength="330" required></textarea>
+                <textarea id="edit-review-text" rows="10" cols="100" name="review" maxlength="330" required></textarea>
             </div>
 
             <div class="reviewBtnDiv">
-                <button class="btn btn-secondary" id="reviewButton">Submit Review</button>
+                <button type="submit" class="btn btn-secondary" id="reviewEditButton">Submit Review</button>
+
+                <button type="button" class="btn btn-secondary" id="cancel-edit-btn">Cancel</button>
             </div>
         </form>
 
@@ -561,14 +351,14 @@
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script>
 
-    <script src="../public/javascripts/reviews.js"></script>
 
 
     <!-- Swiper.js Script -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <script src="../public/javascripts/swipe.js"></script>
+    <script src="../public/javascripts/swipe.js" defer></script>
 
+    <script src="../public/javascripts/reviews.js" defer></script>
 
 </body>
 
