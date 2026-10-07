@@ -39,11 +39,10 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 
 ## 📈 Future Improvements
-* Implement edit and delete feature for reviews
 * Add a modal for users to select seating at the restaurant when making a reservation
 * Backend to permantly store reviews and allow users to get emails after submitting reservations
 * Display review ratings with stars
-* Increasee review count for reviews from 330 characters to 1000 and have a 'show more button' to show longer reviews on a modal
+* Increase review count for reviews from 330 characters to 1000 and have a 'show more button' to show longer reviews on a modal
 * Better styles for form inputs and input pop-ups
 * (Possibly) Migrate the website to React.js
 
