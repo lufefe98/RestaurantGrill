@@ -1,3 +1,10 @@
+// Initialize Email.js
+
+emailjs.init({
+    publicKey: "XOEebu3ouD0ep7us2",
+})
+
+
 // Select elements
 
 const southBeachRadio = document.getElementById('southBeachRadio')
@@ -5,25 +12,58 @@ const umhlangaRadio = document.getElementById('umhlangaRadio')
 
 const southBeachImg = document.getElementById('southBeachResImg')
 const umhlangaImg = document.getElementById('umhlangaResImg')
-
-
 const locationImgs = document.getElementsByClassName('res-loc-img')
 
+const reservationForm = document.getElementById('reservations-form')
+const userName = document.getElementById('name')
+const date = document.getElementById('date')
+const time = document.getElementById('time')
+const email = document.getElementById('email')
+const locations = document.getElementsByClassName('locationRadios')
 
-// if statements
+
+
+// Reservation Location Selection
 
 southBeachRadio.addEventListener('change', () => {
-    if(southBeachRadio.checked) {
+    if (southBeachRadio.checked) {
         southBeachImg.classList.remove('uncheckedRadio')
         umhlangaImg.classList.add('uncheckedRadio')
     }
-    console.log('South Beach radio has been checked')
 })
 
 umhlangaRadio.addEventListener('change', () => {
-    if(umhlangaRadio.checked) {
+    if (umhlangaRadio.checked) {
         umhlangaImg.classList.remove('uncheckedRadio')
         southBeachImg.classList.add('uncheckedRadio')
     }
-        console.log('Umhlanga radio has been checked')
 })
+
+
+
+
+// Form Submission & Mailing Feature
+
+reservationForm.addEventListener('submit', event => {
+    event.preventDefault()
+
+    let params = {
+        name: userName.value,
+        email: email.value,
+        date: date.value,
+        time: time.value,
+        location: Array.from(locations).find(location => location.checked)?.value || 'undefined'
+    }
+
+    console.log('EmailJS available:', typeof emailjs);
+
+    emailjs.send("service_bemkinq",
+        "template_uavqdhg",
+        params)
+        .then(() => { alert('Booking Confirmed!!!') })
+        .catch(error => { console.error('EmailJS error:', error); });
+
+
+    reservationForm.reset()
+})
+
