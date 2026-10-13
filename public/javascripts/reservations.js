@@ -67,3 +67,36 @@ reservationForm.addEventListener('submit', event => {
     reservationForm.reset()
 })
 
+
+
+// Preselect Location if Clicked from Locations Page
+
+// const locRadios = [umhlangaRadio, southBeachRadio]
+
+// locRadios[0].checked = true
+
+
+// console.log(locRadios[0].checked)
+
+document.addEventListener('DOMContentLoaded', () => {
+    const locationParams = new URLSearchParams(window.location.search)
+
+    const locationValue = locationParams.get('location')
+
+    const locRadios = [southBeachRadio, umhlangaRadio]
+
+
+    locRadios.find(locRadio => locRadio.value === locationValue ? locRadio.checked = true : locRadio.checked = false)
+
+
+    if (southBeachRadio.checked) {
+        southBeachImg.classList.remove('uncheckedRadio')
+        umhlangaImg.classList.add('uncheckedRadio')
+    }
+
+    if (umhlangaRadio.checked) {
+        umhlangaImg.classList.remove('uncheckedRadio')
+        southBeachImg.classList.add('uncheckedRadio')
+    }
+
+})
