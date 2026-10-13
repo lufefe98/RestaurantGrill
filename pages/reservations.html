@@ -181,8 +181,9 @@
                 </div>
 
                 <div class="input-div">
-                    <label for="phone">Phone Number</label>
-                    <input type="phone" name="phone" id="phone" placeholder="eg: 031 000 0000" required>
+                    <label for="tel">Phone Number</label>
+                    <input type="tel" name="tel" id="tel" placeholder="eg: 031 000 0000"
+                        pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
 
                     <label for="email">Email</label>
                     <input type="email" name="email" id="email" placeholder="name@emailaddress.com" required>
@@ -199,12 +200,12 @@
                 <div class="date-inputs">
                     <div class="input-div">
                         <label for="date">Date</label>
-                        <input type="date" name="date" id="date" placeholder="Pick a Day">
+                        <input type="date" name="date" id="date" placeholder="Pick a Day" required>
                     </div>
 
                     <div class="input-div">
                         <label for="time">Time</label>
-                        <input type="time" name="time" id="time" value="12:00">
+                        <input type="time" name="time" id="time" value="12:00" required>
                     </div>
                 </div>
 
