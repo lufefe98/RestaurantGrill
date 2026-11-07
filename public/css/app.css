@@ -344,7 +344,6 @@ input[type="date"] {
   border: none;
   font-weight: 500;
   color: #6c757d;
-  color-scheme: dark;
   background-color: white;
   border-radius: 5px;
   font-family: 'Raleway', sans-serif;
@@ -355,7 +354,6 @@ input[type="time"] {
   text-align: center;
   font-weight: 500;
   color: #6c757d;
-  color-scheme: dark;
   background-color: white;
   border-radius: 5px;
   font-family: 'Raleway', sans-serif;
@@ -528,6 +526,35 @@ span.form-text {
 
 #flexCheckDefault {
   margin-right: 5px;
+}
+
+
+#reservation-dropdown {
+  height: 40px;
+  width: 175px;
+  margin: auto auto 25px;
+  background-color: white;
+  border: none;
+  text-align: center;
+  color: #6c757d;
+  font-weight: 500;
+  font-family: 'Raleway', sans-serif;
+  appearance: none;
+}
+
+#reservation-dropdown:focus {
+  border: solid rgba(182, 69, 69, 0.27);
+  outline: none;
+}
+
+#max-people-res {
+  display: block;
+}
+
+#people-container {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
 }
 
 

@@ -24,6 +24,159 @@ const locations = document.getElementsByClassName('locationRadios')
 
 
 
+// Set Date & Time Form Validations
+
+// dates
+
+const today = new Date();
+
+const yyyy = today.getFullYear();
+const mm = String(today.getMonth() + 1).padStart(2, '0')
+const dd = String(today.getDate()).padStart(2, '0')
+
+const minDate = `${yyyy}-${mm}-${dd}`
+
+
+const nextYear = today.getFullYear() + 1
+
+
+const maxDate = `${nextYear}-${mm}-${dd}`
+
+
+// set min and max dates
+date.min = minDate
+date.value = minDate
+
+date.max = maxDate
+
+
+
+// time
+
+const now = new Date()
+
+const currTime = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false })
+
+time.min = "09:00";
+time.max = "20:00";
+
+
+// Set minimum booking time
+let bookingTime = now
+bookingTime.setHours(bookingTime.getHours() + 1)
+
+let minBookingTime = bookingTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+
+
+// You can only book 1 hour from now
+if (date.value === minDate) {
+    time.min = minBookingTime
+    time.value = minBookingTime
+} 
+
+
+
+
+
+
+// If it is after 7pm, min date is set to tomorrow
+document.addEventListener('DOMContentLoaded', () => {
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1)
+
+    const year = tomorrow.getFullYear();
+    const month = String(tomorrow.getMonth() + 1).padStart(2, '0')
+    const tmrDay = String(tomorrow.getDate()).padStart(2, '0');
+
+    const tomorrowDate = `${year}-${month}-${tmrDay}`
+
+    if (Number(currTime.slice(0, 2)) >= 19) {
+        // Make min date tomorrow, at 9AM
+        date.min = tomorrowDate
+        date.value = tomorrowDate
+        time.min = "09:00"
+        time.value = "09:00"
+        minBookingTime = "09:00"
+    }
+
+
+    // Reset booking times for later dates
+
+    if (date.value !== minDate) {
+        time.min = "09:00"
+        time.value = "09:00"
+        time.max = "20:00"
+    }
+})
+
+
+
+// If the time is moved to a time outside min or max 
+// time, alert the user and set the time to the closest
+// time (ie: min or max time)
+time.addEventListener('change', () => {
+
+    // If the user clears the input, do nothing
+    if (!time.value) return;
+
+    // Restrict if the time is earlier than min
+    if (time.min && time.value < time.min) {
+        alert(`Please select a time after ${time.min}`);
+        time.value = time.min;
+    }
+    // Restrict if the time is later than max
+    else if (time.max && time.value > time.max) {
+        alert(`Please select a time before ${time.max}`);
+        time.value = time.max;
+    }
+});
+
+
+reservationForm.addEventListener('submit', (event) => {
+
+    // If the user clears the input, do nothing
+    if (!time.value) return;
+
+    // Restrict if the time is earlier than min
+    if (time.min && time.value < time.min) {
+        event.preventDefault()
+        alert(`Please select a time after ${time.min}`);
+        time.value = time.min;
+    }
+    // Restrict if the time is later than max
+    else if (time.max && time.value > time.max) {
+        event.preventDefault()
+        alert(`Please select a time before ${time.max}`);
+        time.value = time.max;
+    }
+})
+
+
+// If the date is set to a later date than today, set the
+// time to 9AM.
+// Otherwise, if time goes back to today, then reset to the
+// usual booking time an hour from the current time
+date.addEventListener('change', () => {
+    if (date.value > minDate) {
+        time.min = '09:00'
+        time.value = '09:00'
+    } else if (date.value === minDate && time.value < currTime) {
+        time.min = minBookingTime
+        time.value = minBookingTime
+    }
+})
+
+
+// If the time is earlier than 9AM, set the time value to 9AM
+if (currTime < '09:00') {
+    time.min = '09:00'
+    time.value = '09:00'
+}
+
+
+
+
+
 // Reservation Location Selection
 
 southBeachRadio.addEventListener('change', () => {
