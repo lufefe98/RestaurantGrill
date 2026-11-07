@@ -177,12 +177,13 @@
 
                 <div class="input-div">
                     <label for="name">Name</label>
-                    <input type="text" name="" id="name" placeholder="eg: John Smith" required>
+                    <input type="text" pattern="[A-Za-z ]*" name="name" id="name" placeholder="eg: John Smith" required>
                 </div>
 
                 <div class="input-div">
-                    <label for="phone">Phone Number</label>
-                    <input type="phone" name="phone" id="phone" placeholder="eg: 031 000 0000" required>
+                    <label for="tel">Phone Number</label>
+                    <input type="tel" name="tel" id="tel" placeholder="eg: 031 000 0000"
+                        pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
 
                     <label for="email">Email</label>
                     <input type="email" name="email" id="email" placeholder="name@emailaddress.com" required>
@@ -199,39 +200,37 @@
                 <div class="date-inputs">
                     <div class="input-div">
                         <label for="date">Date</label>
-                        <input type="date" name="date" id="date" placeholder="Pick a Day">
+                        <input type="date" name="date" id="date" required>
                     </div>
 
                     <div class="input-div">
                         <label for="time">Time</label>
-                        <input type="time" name="time" id="time" value="12:00">
+                        <input type="time" name="time" id="time" value="12:00" required>
                     </div>
                 </div>
 
 
                 <!-- Number of People -->
-                <div class="dropdown mx-auto" id="people-container">
-                    <p id="max-people-res">
+                <div class="dropdown" id="people-container">
+                    <label id="max-people-res" for="reservation-dropdown">
                         How many people will you be bringing along? <strong> (maximum of 10 people per reservation)
                         </strong>
-                    </p>
+                    </label>
 
-                    <button class="btn btn-secondary dropdown-toggle mx-auto" type="button" id="dropdownMenuButton1"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <p>Number of People</p>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" value="1">1</a></li>
-                        <li><a class="dropdown-item" value="2">2</a></li>
-                        <li><a class="dropdown-item" value="3">3</a></li>
-                        <li><a class="dropdown-item" value="4">4</a></li>
-                        <li><a class="dropdown-item" value="5">5</a></li>
-                        <li><a class="dropdown-item" value="6">6</a></li>
-                        <li><a class="dropdown-item" value="7">7</a></li>
-                        <li><a class="dropdown-item" value="8">8</a></li>
-                        <li><a class="dropdown-item" value="9">9</a></li>
-                        <li><a class="dropdown-item" value="10">10</a></li>
-                    </ul>
+
+                    <select id="reservation-dropdown" name="reservation-dropdown" required>
+                        <option><a class="dropdown-item" value="" selected disabled>How Many People?</a></option>
+                        <option><a class="dropdown-item" value="1">1</a></option>
+                        <option><a class="dropdown-item" value="2">2</a></option>
+                        <option><a class="dropdown-item" value="3">3</a></option>
+                        <option><a class="dropdown-item" value="4">4</a></option>
+                        <option><a class="dropdown-item" value="5">5</a></option>
+                        <option><a class="dropdown-item" value="6">6</a></option>
+                        <option><a class="dropdown-item" value="7">7</a></option>
+                        <option><a class="dropdown-item" value="8">8</a></option>
+                        <option><a class="dropdown-item" value="9">9</a></option>
+                        <option><a class="dropdown-item" value="10">10</a></option>
+                    </select>
                 </div>
                 <!-- Number of People -->
 
