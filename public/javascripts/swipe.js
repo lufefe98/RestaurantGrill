@@ -64,14 +64,17 @@ reviewForm.addEventListener("submit", (e) => {
 
   // input fields
   const reviewName = document.getElementById("name");
-  const reviewDate = document.getElementById("date");
   const reviewRatings = document.querySelectorAll(".star");
   const reviewText = document.getElementById("review");
+
+  // Review Timestamp
+  const newDate = new Date()
+  const reviewDate = newDate.toLocaleDateString('en-CA')
+
 
   // form validation
   if (
     !reviewName.value.trim() ||
-    !reviewDate.value.trim() ||
     !reviewText.value.trim()
   ) {
     alert("Please fill out all fields.");
@@ -98,7 +101,7 @@ reviewForm.addEventListener("submit", (e) => {
   // Create review object
   const newReview = {
     name: reviewName.value.trim(),
-    date: reviewDate.value.trim(),
+    date: reviewDate,
     rating: selectedRating,
     text: reviewText.value.trim(),
     id: crypto.randomUUID()
@@ -116,11 +119,13 @@ reviewForm.addEventListener("submit", (e) => {
 
   // Reset form
   reviewForm.reset();
+
+
+  return newReview
 });
 
 
 
-// function renderReviewCard(review) {
 
 function renderReviewCard() {
 
@@ -130,175 +135,80 @@ function renderReviewCard() {
 
   // CREATE REVIEW CARD ELEMENTS
 
+
   userReviews.forEach(userReview => {
-      // Card
-  const reviewCard = document.createElement("div");
-  reviewCard.classList.add("review-card", "swiper-slide");
+    // Card
+    const reviewCard = document.createElement("div");
+    reviewCard.classList.add("review-card", "swiper-slide");
 
-  // Review Details
-  const reviewCardDetails = document.createElement("div");
-  reviewCardDetails.classList.add("review-details");
+    // Review Details
+    const reviewCardDetails = document.createElement("div");
+    reviewCardDetails.classList.add("review-details");
 
-  // review name
-  const reviewCardName = document.createElement("span");
-  reviewCardName.classList.add("review-name");
-  reviewCardName.textContent = userReview.name;
+    // review name
+    const reviewCardName = document.createElement("span");
+    reviewCardName.classList.add("review-name");
+    reviewCardName.textContent = userReview.name;
 
     // review separator
-  const separator = document.createTextNode(" | ");
+    const separator = document.createTextNode(" | ");
 
-  // review date
-  const reviewCardDate = document.createElement("span");
-  reviewCardDate.classList.add("review-date");
-  const formattedDate = new Date(userReview.date).toLocaleDateString("en-GB", {
-    day: "numeric",
-    month: "short",
-    year: "numeric",
-  });
-  reviewCardDate.textContent = formattedDate;
+    // review date
+    const reviewCardDate = document.createElement("span");
+    reviewCardDate.classList.add("review-date");
+    reviewCardDate.textContent = userReview.date;
 
 
-  // Card Options
-  const reviewOptions = document.createElement('div')
-  reviewOptions.classList.add('review-options')
+    // Card Options
+    const reviewOptions = document.createElement('div')
+    reviewOptions.classList.add('review-options')
 
 
-  // card option button
-  const reviewOptionButton = document.createElement('button')
-  reviewOptionButton.classList.add('review-options-btn')
-  reviewOptionButton.textContent = "\u22EE"
-
-  
-  // card option dropdown
-  const reviewOptionsDropdown = document.createElement('div')
-  reviewOptionsDropdown.classList.add('review-options-dropdown', 'hide-dropdown')
+    // card option button
+    const reviewOptionButton = document.createElement('button')
+    reviewOptionButton.classList.add('review-options-btn')
+    reviewOptionButton.textContent = "\u22EE"
 
 
-  // card dropdown items
-  const dropDownValues = ['edit', 'delete']
+    // card option dropdown
+    const reviewOptionsDropdown = document.createElement('div')
+    reviewOptionsDropdown.classList.add('review-options-dropdown', 'hide-dropdown')
 
-  for (let i = 0; i < dropDownValues.length; i++) {
-    const reviewDropdownItem = document.createElement('a')
-    reviewDropdownItem.classList.add('review-dropdown-item')
 
-    reviewDropdownItem.setAttribute('value', dropDownValues[i])
-    reviewDropdownItem.textContent = dropDownValues[i].charAt(0).toUpperCase() + dropDownValues[i].slice(1)
+    // card dropdown items
+    const dropDownValues = ['edit', 'delete']
 
-    reviewOptionsDropdown.appendChild(reviewDropdownItem)
+    for (let i = 0; i < dropDownValues.length; i++) {
+      const reviewDropdownItem = document.createElement('a')
+      reviewDropdownItem.classList.add('review-dropdown-item')
 
-  }
+      reviewDropdownItem.setAttribute('value', dropDownValues[i])
+      reviewDropdownItem.textContent = dropDownValues[i].charAt(0).toUpperCase() + dropDownValues[i].slice(1)
 
-  reviewOptions.append(reviewOptionButton, reviewOptionsDropdown)
+      reviewOptionsDropdown.appendChild(reviewDropdownItem)
+
+    }
+
+    reviewOptions.append(reviewOptionButton, reviewOptionsDropdown)
 
     // Review Text
-  const reviewCardText = document.createElement("p");
-  reviewCardText.classList.add("review-text");
-  reviewCardText.textContent = userReview.text;
+    const reviewCardText = document.createElement("p");
+    reviewCardText.classList.add("review-text");
+    reviewCardText.textContent = userReview.text;
 
 
-  // Review Rating
-  const reviewCardRating = document.createElement("p");
-  reviewCardRating.classList.add("review-rating");
-  reviewCardRating.textContent = `Rating: ${userReview.rating}/5`;
+    // Review Rating
+    const reviewCardRating = document.createElement("p");
+    reviewCardRating.classList.add("review-rating");
+    reviewCardRating.textContent = `Rating: ${userReview.rating}/5`;
 
-  // Card ID
-  reviewCard.dataset.id = userReview.id
+    // Card ID
+    reviewCard.dataset.id = userReview.id
 
-  // APPEND CARD ELEMENTS
-  reviewCardDetails.append(reviewCardName, separator, reviewCardDate);
-  reviewCard.append(reviewCardDetails, reviewOptions, reviewCardText, reviewCardRating);
+    // APPEND CARD ELEMENTS
+    reviewCardDetails.append(reviewCardName, separator, reviewCardDate);
+    reviewCard.append(reviewCardDetails, reviewOptions, reviewCardText, reviewCardRating);
 
-  swiper.appendSlide(reviewCard);
+    swiper.appendSlide(reviewCard);
   });
 }
-
-
-
-
-// Iterate through array to render reviews, and also match
-// reviews in the UI and the array/localStorage.
-
-// function renderReviewCard(review) {
-
-  // Card
-  // const reviewCard = document.createElement("div");
-  // reviewCard.classList.add("review-card", "swiper-slide");
-
-  // // Review Details
-  // const reviewCardDetails = document.createElement("div");
-  // reviewCardDetails.classList.add("review-details");
-
-  // // review name
-  // const reviewCardName = document.createElement("span");
-  // reviewCardName.classList.add("review-name");
-  // reviewCardName.textContent = review.name;
-
-
-  // // review separator
-  // const separator = document.createTextNode(" | ");
-
-  // // review date
-  // const reviewCardDate = document.createElement("span");
-  // reviewCardDate.classList.add("review-date");
-  // const formattedDate = new Date(review.date).toLocaleDateString("en-GB", {
-  //   day: "numeric",
-  //   month: "short",
-  //   year: "numeric",
-  // });
-  // reviewCardDate.textContent = formattedDate;
-
-
-  // // Card Options
-  // const reviewOptions = document.createElement('div')
-  // reviewOptions.classList.add('review-options')
-
-
-  // // card option button
-  // const reviewOptionButton = document.createElement('button')
-  // reviewOptionButton.classList.add('review-options-btn')
-  // reviewOptionButton.textContent = "\u22EE"
-
-
-  // // card option dropdown
-  // const reviewOptionsDropdown = document.createElement('div')
-  // reviewOptionsDropdown.classList.add('review-options-dropdown', 'hide-dropdown')
-
-
-  // // card dropdown items
-  // const dropDownValues = ['edit', 'delete']
-
-  // for (let i = 0; i < dropDownValues.length; i++) {
-  //   const reviewDropdownItem = document.createElement('a')
-  //   reviewDropdownItem.classList.add('review-dropdown-item')
-
-  //   reviewDropdownItem.setAttribute('value', dropDownValues[i])
-  //   reviewDropdownItem.textContent = dropDownValues[i].charAt(0).toUpperCase() + dropDownValues[i].slice(1)
-
-  //   reviewOptionsDropdown.appendChild(reviewDropdownItem)
-
-  // }
-
-  // reviewOptions.append(reviewOptionButton, reviewOptionsDropdown)
-
-
-
-  // // Review Text
-  // const reviewCardText = document.createElement("p");
-  // reviewCardText.classList.add("review-text");
-  // reviewCardText.textContent = review.text;
-
-
-  // // Review Rating
-  // const reviewCardRating = document.createElement("p");
-  // reviewCardRating.classList.add("review-rating");
-  // reviewCardRating.textContent = `Rating: ${review.rating}/5`;
-
-  // // Card ID
-  // reviewCard.dataset.id = review.id
-
-  // // APPEND CARD ELEMENTS
-  // reviewCardDetails.append(reviewCardName, separator, reviewCardDate);
-  // reviewCard.append(reviewCardDetails, reviewOptions, reviewCardText, reviewCardRating);
-
-  // swiper.appendSlide(reviewCard);
-// }
