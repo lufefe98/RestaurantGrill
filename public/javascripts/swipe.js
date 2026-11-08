@@ -120,8 +120,6 @@ reviewForm.addEventListener("submit", (e) => {
   // Reset form
   reviewForm.reset();
 
-
-  return newReview
 });
 
 
