@@ -37,9 +37,8 @@ const dd = String(today.getDate()).padStart(2, '0')
 const minDate = `${yyyy}-${mm}-${dd}`
 
 
+
 const nextYear = today.getFullYear() + 1
-
-
 const maxDate = `${nextYear}-${mm}-${dd}`
 
 
@@ -53,36 +52,41 @@ date.max = maxDate
 
 // time
 
-const now = new Date()
+function getCurrentTime() {
+    const now = new Date()
 
-const currTime = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false })
+    return now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false })
+}
+
+
 
 time.min = "09:00";
 time.max = "20:00";
 
 
 // Set minimum booking time
-let bookingTime = now
-bookingTime.setHours(bookingTime.getHours() + 1)
 
-let minBookingTime = bookingTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+function getBookingTime() {
+    const bookingTime = new Date()
+    bookingTime.setHours(bookingTime.getHours() + 1)
 
-
-// You can only book 1 hour from now
-if (date.value === minDate) {
-    time.min = minBookingTime
-    time.value = minBookingTime
-} 
+    return bookingTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false })
+}
 
 
 
 
 
+// Default Time & Date States
 
-// If it is after 7pm, min date is set to tomorrow
 document.addEventListener('DOMContentLoaded', () => {
     const tomorrow = new Date();
     tomorrow.setDate(tomorrow.getDate() + 1)
+
+    if (date.value === minDate) {
+        time.value = getBookingTime()
+    }
+
 
     const year = tomorrow.getFullYear();
     const month = String(tomorrow.getMonth() + 1).padStart(2, '0')
@@ -90,13 +94,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const tomorrowDate = `${year}-${month}-${tmrDay}`
 
+    // If it is 7pm or later, min date is set to tomorrow
+
+    const currTime = getCurrentTime()
+
     if (Number(currTime.slice(0, 2)) >= 19) {
         // Make min date tomorrow, at 9AM
         date.min = tomorrowDate
         date.value = tomorrowDate
         time.min = "09:00"
         time.value = "09:00"
-        minBookingTime = "09:00"
+        // Will removing the below affect the minBookingTime?
+        // minBookingTime = "09:00"
+    }
+
+
+    // If the time is earlier than 9AM, set the time value to 9AM
+    if (currTime < '09:00') {
+        time.min = '09:00'
+        time.value = '09:00'
     }
 
 
@@ -116,13 +132,15 @@ document.addEventListener('DOMContentLoaded', () => {
 // time (ie: min or max time)
 time.addEventListener('change', () => {
 
+    const minBookingTime = getBookingTime()
+
     // If the user clears the input, do nothing
     if (!time.value) return;
 
     // Restrict if the time is earlier than min
-    if (time.min && time.value < time.min) {
-        alert(`Please select a time after ${time.min}`);
-        time.value = time.min;
+    if (time.min && time.value < minBookingTime) {
+        alert(`Please select a time after ${minBookingTime}`);
+        time.value = minBookingTime
     }
     // Restrict if the time is later than max
     else if (time.max && time.value > time.max) {
@@ -137,11 +155,16 @@ reservationForm.addEventListener('submit', (event) => {
     // If the user clears the input, do nothing
     if (!time.value) return;
 
+    const minBookingTime = getBookingTime()
+
+    time.min = minBookingTime
+
+
     // Restrict if the time is earlier than min
-    if (time.min && time.value < time.min) {
+    if (time.value < minBookingTime) {
         event.preventDefault()
-        alert(`Please select a time after ${time.min}`);
-        time.value = time.min;
+        alert(`Please select a time after ${minBookingTime}`);
+        time.value = minBookingTime;
     }
     // Restrict if the time is later than max
     else if (time.max && time.value > time.max) {
@@ -157,21 +180,36 @@ reservationForm.addEventListener('submit', (event) => {
 // Otherwise, if time goes back to today, then reset to the
 // usual booking time an hour from the current time
 date.addEventListener('change', () => {
+
+    // If date is changed to day after today, the time
+    // should be 9AM.
+
     if (date.value > minDate) {
         time.min = '09:00'
         time.value = '09:00'
-    } else if (date.value === minDate && time.value < currTime) {
+    } else if (date.value === minDate) {
+
+        // If user sets time back to currnet day, then 
+        // regular booking time of one hour later should
+        // be the value of the time.
+        
+        const minBookingTime = getBookingTime()
         time.min = minBookingTime
-        time.value = minBookingTime
+
+
+        if (time.value < minBookingTime) {
+            time.value = minBookingTime
+        }
+    }
+
+    // Reset booking time to 9AM if it is after 7PM 
+    const currTime = getCurrentTime()
+
+    if (currTime >= "19:00") {
+        minBookingTime = "09:00"
     }
 })
 
-
-// If the time is earlier than 9AM, set the time value to 9AM
-if (currTime < '09:00') {
-    time.min = '09:00'
-    time.value = '09:00'
-}
 
 
 
