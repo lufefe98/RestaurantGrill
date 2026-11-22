@@ -242,3 +242,17 @@ if (isEmptyReviews) {
 } else {
   emptyReviewTextDiv.style.display = 'none'
 }
+
+
+
+// User review length alert
+
+const textAreas = document.querySelectorAll('textarea')
+
+textAreas.forEach(textArea => {
+  textArea.addEventListener('input', () => {
+    if (textArea.value.length === 350) {
+      alert("You've reached 350 character limit")
+    }
+  })
+});
